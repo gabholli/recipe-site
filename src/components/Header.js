@@ -7,6 +7,11 @@ export default function Header() {
         <header>
             <Link to="/">Home</Link>
             <nav>
+                {/* <NavLink
+                    to="/recipes"
+                >
+                    Recipes
+                </NavLink> */}
             </nav>
         </header>
     )

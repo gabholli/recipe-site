@@ -1,0 +1,46 @@
+import React from "react"
+import { useState, useEffect } from "react"
+import { Link, useSearchParams } from "react-router-dom"
+
+export default function Recipes() {
+    const [foodData, setFoodData] = useState([])
+    const [searchParams, setSearchParams] = useSearchParams()
+
+    useEffect(() => {
+        fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata")
+            .then(response => {
+                if (!response.ok) {
+                    throw Error("Data not available")
+                }
+                return response.json()
+            })
+            .then(data => {
+                console.log(data)
+                setFoodData(data.meals)
+            })
+            .catch(error =>
+                console.log("Fetch error: ", error))
+    }, [])
+
+    const recipeElements = foodData.map(meal => (
+        <div key={meal.idMeal} className="van-tile">
+            <Link
+                to={meal.idMeal}
+            // state={{
+            //     search: `?${searchParams.toString()}`,
+            //     type: typeFilter
+            // }}
+            >
+                <img src={meal.strMealThumb} alt="Food item" />
+                <h1>{meal.strMeal}</h1>
+            </Link>
+        </div>
+    ))
+
+
+    return (
+        <>
+            {recipeElements}
+        </>
+    )
+}

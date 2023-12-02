@@ -35,7 +35,8 @@ body {
 
 /* General rules */
 
-.link {
+.link,
+.header-link {
   color: white;
   text-decoration: none;
   cursor: pointer;
@@ -54,7 +55,12 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2em;
+  widtH: 100svw;
+}
+
+nav {
+  display: inherit;
+  gap: 2.5em;
 }
 
 /* Home page rules */

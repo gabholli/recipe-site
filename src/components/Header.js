@@ -6,10 +6,12 @@ export default function Header() {
 
     return (
         <header>
-            <Link
-                className="link"
-                to="/">Home</Link>
+
             <nav>
+                <NavLink
+                    className="link"
+                    to="/">Home
+                </NavLink>
                 <NavLink
                     to="/recipes"
                     className="link"

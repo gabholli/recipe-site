@@ -97,3 +97,50 @@ footer {
   justify-content: center;
   height: 15svh;
 }
+
+/* Media queries */
+
+@media (min-width: 768px) {
+  .home-container {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+      ". . ."
+      ". . ."
+      ". . ."
+      ". title ."
+      ". subtext .";
+  }
+
+}
+
+@media (min-width: 1440px) {
+
+  .home-heading,
+  .home-subtext {
+    width: 500px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .home-container {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+      ". . ."
+      ". . ."
+      ". . ."
+      ". . ."
+      ". . ."
+      ". . ."
+      ". . ."
+      ". . ."
+      ". title ."
+      ". subtext .";
+  }
+
+  .home-heading,
+  .home-subtext {
+    width: 1500px;
+  }
+}

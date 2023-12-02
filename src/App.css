@@ -32,6 +32,10 @@ footer {
 
 header {
   height: 10svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
 }
 
 /* Home page rules */
@@ -39,22 +43,25 @@ header {
 .home-container {
   display: grid;
   grid-template-areas:
-    ". . ."
-    ". . ."
-    ". title ."
-    ". subtext .";
+    "."
+    "."
+    "."
+    "."
+    "title"
+    "subtext";
+}
+
+.home-heading,
+.home-subtext {
+  text-align: center;
 }
 
 .home-heading {
   grid-area: title;
-  width: 100svw;
-  text-align: center;
 }
 
 .home-subtext {
   grid-area: subtext;
-  text-align: center;
-  width: 100svw;
 }
 
 /* Main rules */
@@ -62,20 +69,24 @@ header {
 .main-container {
   height: 75svh;
   display: grid;
-  grid-auto-columns: 1fr;
   grid-template-areas:
     ". image ."
     ". name .";
+  padding: 2em;
 }
 
 .food-image {
   grid-area: image;
   height: 250px;
   max-width: 250px;
+  display: block;
+  margin: 0 auto;
 }
 
 .food-name {
   grid-area: name;
+  text-align: center;
+  text-decoration: none;
 }
 
 /* Footer rules */

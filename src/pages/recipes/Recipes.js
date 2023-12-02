@@ -25,6 +25,7 @@ export default function Recipes() {
     const recipeElements = foodData.map(meal => (
         <div key={meal.idMeal} className="van-tile">
             <Link
+                className="link"
                 to={meal.idMeal}
             // state={{
             //     search: `?${searchParams.toString()}`,

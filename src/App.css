@@ -20,6 +20,19 @@ body {
   padding: 0;
 }
 
+/* Typography */
+
+:root {
+  /* Mobile font sizes */
+  --font-size-heading-mobile: 1rem;
+
+  /* Tablet font sizes */
+  --font-size-heading-tablet: 1.3rem;
+
+  /* Small laptop font sizes */
+  --font-size-heading-small-laptop: 1.5rem;
+}
+
 /* General rules */
 
 .link {
@@ -32,6 +45,7 @@ header,
 footer {
   background-color: #2A2A2A;
   padding: 2em;
+  height: 75px;
 }
 
 /* Header rules */
@@ -71,15 +85,16 @@ header {
 .all-content-container {
   display: flex;
   flex-direction: column;
+  height: 100svh;
 }
 
 .main-container {
   display: grid;
-  grid-template-columns: 1fr;
   grid-template-areas:
     "image"
     "name";
   padding: 2em;
+  margin: auto;
 }
 
 .food-image {
@@ -102,6 +117,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: auto;
 }
 
 /* Media queries */
@@ -118,51 +134,34 @@ footer {
 
   .main-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
-      "image"
-      "name";
+      ". image ."
+      ". name .";
     padding: 2em;
     place-content: center;
   }
 
   .food-image {
     height: 200px;
+    border-radius: 5px;
   }
 
   .food-name {
-    font-size: 1.5rem;
+    font-size: var(--font-size-heading-tablet);
+  }
+
+  .food-tile {
+    margin: 1em;
   }
 
 }
 
-@media (min-width: 1440px) {
-
-  .home-heading,
-  .home-subtext {
-    width: 500px;
+@media (min-width: 1024px) {
+  .food-name {
+    font-size: var(--font-size-heading-small-laptop);
   }
 }
 
-@media (min-width: 2560px) {
-  .home-container {
-    display: grid;
-    grid-auto-columns: 1fr;
-    grid-template-areas:
-      ". . ."
-      ". . ."
-      ". . ."
-      ". . ."
-      ". . ."
-      ". . ."
-      ". . ."
-      ". . ."
-      ". title ."
-      ". subtext .";
-  }
+@media (min-width: 1440px) {}
 
-  .home-heading,
-  .home-subtext {
-    width: 1500px;
-  }
-}
+@media (min-width: 2560px) {}

@@ -7,7 +7,7 @@ export default function Recipes() {
     const [searchParams, setSearchParams] = useSearchParams()
 
     useEffect(() => {
-        fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata")
+        fetch("https://www.themealdb.com/api/json/v1/1/search.php?f=c")
             .then(response => {
                 if (!response.ok) {
                     throw Error("Data not available")
@@ -23,7 +23,7 @@ export default function Recipes() {
     }, [])
 
     const recipeElements = foodData.map(meal => (
-        <div key={meal.idMeal} className="van-tile">
+        <div key={meal.idMeal} className="food-tile">
             <Link
                 className="link"
                 to={meal.idMeal}

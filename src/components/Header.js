@@ -3,15 +3,19 @@ import { Link, NavLink } from "react-router-dom"
 
 export default function Header() {
 
+
     return (
         <header>
-            <Link to="/">Home</Link>
+            <Link
+                className="link"
+                to="/">Home</Link>
             <nav>
-                {/* <NavLink
+                <NavLink
                     to="/recipes"
+                    className="link"
                 >
                     Recipes
-                </NavLink> */}
+                </NavLink>
             </nav>
         </header>
     )

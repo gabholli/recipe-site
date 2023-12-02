@@ -1,0 +1,88 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* General rules */
+
+.link {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+header,
+footer {
+  background-color: #2A2A2A;
+}
+
+/* Header rules */
+
+header {
+  height: 10svh;
+}
+
+/* Home page rules */
+
+.home-container {
+  display: grid;
+  grid-template-areas:
+    ". . ."
+    ". . ."
+    ". title ."
+    ". subtext .";
+}
+
+.home-heading {
+  grid-area: title;
+  width: 100svw;
+  text-align: center;
+}
+
+.home-subtext {
+  grid-area: subtext;
+  text-align: center;
+  width: 100svw;
+}
+
+/* Main rules */
+
+.main-container {
+  height: 75svh;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    ". image ."
+    ". name .";
+}
+
+.food-image {
+  grid-area: image;
+  height: 250px;
+  max-width: 250px;
+}
+
+.food-name {
+  grid-area: name;
+}
+
+/* Footer rules */
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15svh;
+}

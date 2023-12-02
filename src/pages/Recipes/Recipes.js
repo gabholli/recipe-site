@@ -31,8 +31,10 @@ export default function Recipes() {
             //     type: typeFilter
             // }}
             >
-                <img src={meal.strMealThumb} alt="Food item" />
-                <h1>{meal.strMeal}</h1>
+                <img className="food-image"
+                    src={meal.strMealThumb}
+                    alt="Food item" />
+                <h1 className="food-name">{meal.strMeal}</h1>
             </Link>
         </div>
     ))

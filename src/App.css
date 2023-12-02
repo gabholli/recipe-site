@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 html {
   font-size: 16px;
 }
@@ -26,12 +31,12 @@ body {
 header,
 footer {
   background-color: #2A2A2A;
+  padding: 2em;
 }
 
 /* Header rules */
 
 header {
-  height: 10svh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,12 +68,17 @@ header {
 
 /* Main rules */
 
+.all-content-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .main-container {
-  height: 75svh;
   display: grid;
+  grid-template-columns: 1fr;
   grid-template-areas:
-    ". image ."
-    ". name .";
+    "image"
+    "name";
   padding: 2em;
 }
 
@@ -92,7 +102,6 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 15svh;
 }
 
 /* Media queries */
@@ -108,13 +117,21 @@ footer {
   }
 
   .main-container {
-    height: 75svh;
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
-      ". image "
-      ". name .";
+      "image"
+      "name";
     padding: 2em;
     place-content: center;
+  }
+
+  .food-image {
+    height: 200px;
+  }
+
+  .food-name {
+    font-size: 1.5rem;
   }
 
 }

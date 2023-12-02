@@ -43,12 +43,9 @@ header {
 .home-container {
   display: grid;
   grid-template-areas:
-    "."
-    "."
-    "."
-    "."
     "title"
     "subtext";
+  place-content: center;
 }
 
 .home-heading,
@@ -105,11 +102,19 @@ footer {
     display: grid;
     grid-auto-columns: 1fr;
     grid-template-areas:
-      ". . ."
-      ". . ."
-      ". . ."
       ". title ."
       ". subtext .";
+    place-content: center;
+  }
+
+  .main-container {
+    height: 75svh;
+    display: grid;
+    grid-template-areas:
+      ". image "
+      ". name .";
+    padding: 2em;
+    place-content: center;
   }
 
 }

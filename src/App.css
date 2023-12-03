@@ -106,12 +106,13 @@ form {
   width: 100%;
 }
 
-.main-container {
+.recipe-list-container {
   display: grid;
   grid-template-areas:
     "image"
     "name";
   margin: auto;
+  padding: 3em 1em;
 }
 
 .food-image {

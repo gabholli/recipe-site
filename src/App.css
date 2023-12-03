@@ -54,7 +54,7 @@ body {
 
   /* 4k font sizes */
   --font-size-4k-link: 2.5rem;
-  --font-size-heading-4k: 7.8rem;
+  --font-size-heading-4k: 6rem;
   --font-size-4k-subtext: 3.8rem;
   --font-size-heading-4k-detail: 7.8rem;
   --font-size-4k-instructions: 4.9rem;
@@ -108,6 +108,7 @@ nav {
     "subtext";
   place-content: center;
   width: 100%;
+  padding: 1em;
   margin: auto;
 }
 
@@ -231,6 +232,8 @@ footer {
   }
 
   .food-image {
+    object-fit: cover;
+    object-position: center;
     height: 200px;
     border-radius: 5px;
   }
@@ -289,6 +292,10 @@ footer {
     line-height: 1.6;
     font-size: var(--font-size-small-laptop-instructions)
   }
+
+  .food-image {
+    height: 250px;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -318,6 +325,10 @@ footer {
     padding: 1em;
     line-height: 1.6;
     font-size: var(--font-size-large-laptop-instructions);
+  }
+
+  .food-image {
+    height: 300px;
   }
 }
 

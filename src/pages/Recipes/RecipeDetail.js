@@ -23,9 +23,33 @@ export default function RecipeDetail() {
 
     const foodElements = food.map(item => {
         return (
-            <div className="recipe-details-container">
+            <div key={item.idMeal} className="recipe-details-container">
                 <h1 className="detail-name">{item.strMeal}</h1>
                 <img className="detail-image" src={item.strMealThumb} alt="Food item" />
+                <h2 className="ingredients-heading">Ingredients:</h2>
+                <div className="ingredients-list">
+                    <p>{item.strMeasure1} {item.strIngredient1}</p>
+                    <p>{item.strMeasure2} {item.strIngredient2}</p>
+                    <p>{item.strMeasure3} {item.strIngredient3}</p>
+                    <p>{item.strMeasure5} {item.strIngredient5}</p>
+                    <p>{item.strMeasure6} {item.strIngredient6}</p>
+                    <p>{item.strMeasure7} {item.strIngredient7}</p>
+                    <p>{item.strMeasure8} {item.strIngredient8}</p>
+                    <p>{item.strMeasure9} {item.strIngredient9}</p>
+                    <p>{item.strMeasure10} {item.strIngredient10}</p>
+                    <p>{item.strMeasure11} {item.strIngredient11}</p>
+                    <p>{item.strMeasure12} {item.strIngredient12}</p>
+                    <p>{item.strMeasure13} {item.strIngredient13}</p>
+                    <p>{item.strMeasure14} {item.strIngredient14}</p>
+                    <p>{item.strMeasure15} {item.strIngredient15}</p>
+                    <p>{item.strMeasure16} {item.strIngredient16}</p>
+                    <p>{item.strMeasure17} {item.strIngredient17}</p>
+                    <p>{item.strMeasure18} {item.strIngredient18}</p>
+                    <p>{item.strMeasure19} {item.strIngredient19}</p>
+                    <p>{item.strMeasure20} {item.strIngredient20}</p>
+
+
+                </div>
                 <p className="recipe-instructions">{item.strInstructions}</p>
             </div>
         )

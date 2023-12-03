@@ -51,9 +51,8 @@ export default function RecipeDetail() {
                     <p>{item.strMeasure18} {item.strIngredient18}</p>
                     <p>{item.strMeasure19} {item.strIngredient19}</p>
                     <p>{item.strMeasure20} {item.strIngredient20}</p>
-
-
                 </div>
+                <hr></hr>
                 <p className="recipe-instructions">{item.strInstructions}</p>
             </div>
         )

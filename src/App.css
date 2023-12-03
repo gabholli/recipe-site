@@ -151,9 +151,9 @@ form {
   display: block;
   margin: 0 auto;
   grid-area: detail-image;
-  min-height: 300px;
+  min-height: 265px;
   border-radius: 5px;
-  max-width: 300px;
+  max-width: 265px;
   object-fit: cover;
   object-position: center;
 }

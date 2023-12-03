@@ -43,7 +43,7 @@ body {
 
 
   /* Small laptop font sizes */
-  --font-size-small-laptop-link: 1.2rem;
+  --font-size-small-laptop-link: 2rem;
   --font-size-heading-small-laptop: 2.5rem;
   --font-size-small-laptop-subtext: 1.5rem;
   --font-size-heading-small-laptop-detail: 3rem;
@@ -52,7 +52,7 @@ body {
   --font-size-small-laptop-instructions: 1.8rem;
 
   /* Large laptop font sizes */
-  --font-size-large-laptop-link: 1.5rem;
+  --font-size-large-laptop-link: 3rem;
   --font-size-heading-large-laptop: 3rem;
   --font-size-large-laptop-subtext: 1.8rem;
   --font-size-heading-large-laptop-detail: 4rem;
@@ -61,7 +61,7 @@ body {
   --font-size-large-laptop-instructions: 2.2rem;
 
   /* 4k font sizes */
-  --font-size-4k-link: 2.5rem;
+  --font-size-4k-link: 4rem;
   --font-size-heading-4k: 6rem;
   --font-size-4k-subtext: 3.8rem;
   --font-size-heading-4k-detail: 7.8rem;
@@ -91,7 +91,6 @@ footer {
   background-color: #2A2A2A;
   padding: 2em;
   width: 100%;
-  height: 10px;
 }
 
 /* Header rules */
@@ -237,6 +236,12 @@ footer {
 /* Media queries */
 
 @media (min-width: 768px) {
+
+  header,
+  footer {
+    font-size: 2rem;
+  }
+
   header {
     flex-direction: row;
   }
@@ -305,7 +310,9 @@ footer {
 }
 
 @media (min-width: 1024px) {
-  .link {
+
+  .link,
+  footer {
     font-size: var(--font-size-small-laptop-link);
   }
 
@@ -353,7 +360,9 @@ footer {
 }
 
 @media (min-width: 1440px) {
-  .link {
+
+  .link,
+  footer {
     font-size: var(--font-size-large-laptop-link);
   }
 
@@ -401,7 +410,9 @@ footer {
 }
 
 @media (min-width: 2560px) {
-  .link {
+
+  .link,
+  footer {
     font-size: var(--font-size-4k-link);
   }
 

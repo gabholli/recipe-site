@@ -7,6 +7,7 @@
 html,
 body {
   height: 100%;
+  width: 100%;
 }
 
 html {
@@ -25,7 +26,7 @@ body {
 :root {
   /* Mobile font sizes */
   --font-size-heading-mobile: 1rem;
-  --font-size-heading-mobile-detail: 2.8rem;
+  --font-size-heading-mobile-detail: 2rem;
   --font-size-mobile-instructions: 1.2rem;
 
 
@@ -49,6 +50,7 @@ header,
 footer {
   background-color: #2A2A2A;
   padding: 2em;
+  width: 100%;
 }
 
 /* Header rules */
@@ -79,6 +81,7 @@ form {
     "title"
     "subtext";
   place-content: center;
+  width: 100%;
 }
 
 .home-heading,
@@ -100,6 +103,7 @@ form {
   display: flex;
   flex-direction: column;
   height: 100svh;
+  width: 100%;
 }
 
 .main-container {
@@ -107,7 +111,6 @@ form {
   grid-template-areas:
     "image"
     "name";
-  padding: 2em;
   margin: auto;
 }
 
@@ -133,19 +136,17 @@ form {
   grid-template-areas:
     "detail-name"
     "detail-image";
-  padding: 1em;
 }
 
 .detail-name {
   text-align: center;
-  margin: 0 0 1em;
   grid-area: detail-name;
   font-size: var(--font-size-heading-mobile-detail);
 }
 
 .detail-image {
   display: block;
-  margin: 0 auto 3.5em;
+  margin: 0 auto;
   grid-area: detail-image;
   min-height: 300px;
   border-radius: 5px;
@@ -155,6 +156,7 @@ form {
 }
 
 .recipe-instructions {
+  padding: 1em;
   line-height: 1.6;
   font-size: var(--font-size-mobile-instructions)
 }

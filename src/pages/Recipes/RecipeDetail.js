@@ -32,8 +32,12 @@ export default function RecipeDetail() {
     })
 
     return (
-        <div className="detail-container">
-            {foodElements}
-        </div>
+        <>
+            {food ? (
+                <div className="detail-container">
+                    {foodElements}
+                </div>
+            ) : <h1>Loading...</h1>}
+        </>
     )
 }

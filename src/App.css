@@ -253,7 +253,6 @@ button:active {
   flex-wrap: wrap;
   text-align: center;
   line-height: 1.1;
-  margin-top: -1em;
   gap: 2em;
   padding: 1em;
 }

@@ -21,7 +21,7 @@ export default function Recipes() {
                 console.log("Fetch error: ", error))
     }, [])
 
-    const recipeElements = foodData.map(meal => (
+    const recipeElements = foodData?.map(meal => (
         <div key={meal.idMeal} className="food-tile">
             <Link
                 className="link"
@@ -56,7 +56,7 @@ export default function Recipes() {
                 <div className="recipe-list-container">
                     {recipeElements}
                 </div>
-            ) : <h1>Loading...</h1>}
+            ) : <h1>No data currently...</h1>}
 
         </div>
     )

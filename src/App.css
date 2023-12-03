@@ -25,6 +25,9 @@ body {
 :root {
   /* Mobile font sizes */
   --font-size-heading-mobile: 1rem;
+  --font-size-heading-mobile-detail: 2.8rem;
+  --font-size-mobile-instructions: 1.2rem;
+
 
   /* Tablet font sizes */
   --font-size-heading-tablet: 1.3rem;
@@ -61,12 +64,12 @@ header {
 
 nav {
   display: inherit;
-  gap: 2.5em;
+  gap: 2em;
 }
 
 form {
   display: flex;
-  gap: 1em;
+  gap: .5em;
 }
 
 /* Home page rules */
@@ -123,6 +126,40 @@ form {
   text-decoration: none;
 }
 
+/* Recipe detail rules */
+
+.detail-container {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    "detail-name"
+    "detail-image";
+  padding: 1em;
+}
+
+.detail-name {
+  text-align: center;
+  margin: 0 0 1em;
+  grid-area: detail-name;
+  font-size: var(--font-size-heading-mobile-detail);
+}
+
+.detail-image {
+  display: block;
+  margin: 0 auto 3.5em;
+  grid-area: detail-image;
+  min-height: 300px;
+  border-radius: 5px;
+  max-width: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.recipe-instructions {
+  line-height: 1.6;
+  font-size: var(--font-size-mobile-instructions)
+}
+
 /* Footer rules */
 
 footer {
@@ -135,6 +172,10 @@ footer {
 /* Media queries */
 
 @media (min-width: 768px) {
+  header {
+    flex-direction: row;
+  }
+
   .home-container {
     display: grid;
     grid-auto-columns: 1fr;

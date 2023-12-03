@@ -90,6 +90,12 @@ footer {
   width: 100%;
 }
 
+input,
+button {
+  border-radius: 15px;
+  padding: 1em;
+}
+
 /* Header rules */
 
 header {
@@ -147,10 +153,17 @@ form {
   gap: .2em;
 }
 
-input,
 button {
-  border-radius: 5px;
-  padding: 1em;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #D5D5D5;
+}
+
+button:active {
+  background-color: #555555;
 }
 
 .recipe-list-container {
@@ -172,6 +185,7 @@ button {
   width: 90%;
   display: block;
   margin: 0 auto;
+  border-radius: 20px;
 }
 
 .food-name {
@@ -215,6 +229,13 @@ button {
   font-size: var(--font-size-mobile-small);
   text-align: center;
   margin-top: 1em;
+}
+
+.no-video-text {
+  font-size: var(--font-size-mobile-small);
+  margin-top: 1.5em;
+  text-align: center;
+  font-weight: bold;
 }
 
 .ingredients-heading {
@@ -288,7 +309,6 @@ footer {
   .food-image {
     object-fit: cover;
     object-position: center;
-    border-radius: 5px;
   }
 
   .home-heading {
@@ -375,6 +395,10 @@ footer {
     font-size: var(--font-size-small-laptop-base);
   }
 
+  .no-video-text {
+    font-size: var(--font-size-small-laptop-base);
+  }
+
   .ingredients-heading {
     font-size: var(--font-size-small-laptop-large);
   }
@@ -434,6 +458,10 @@ footer {
     font-size: var(--font-size-large-laptop-base);
   }
 
+  .no-video-text {
+    font-size: var(--font-size-large-laptop-base);
+  }
+
   .ingredients-heading {
     font-size: var(--font-size-large-laptop-large);
   }
@@ -490,6 +518,10 @@ footer {
   }
 
   .youtube-link {
+    font-size: var(--font-size-base-4k);
+  }
+
+  .no-video-text {
     font-size: var(--font-size-base-4k);
   }
 

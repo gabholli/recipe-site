@@ -158,8 +158,8 @@ form {
 }
 
 button {
-  border: none;
   cursor: pointer;
+  background-color: white;
 }
 
 button:hover {

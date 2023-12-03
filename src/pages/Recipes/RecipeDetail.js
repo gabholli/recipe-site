@@ -23,7 +23,7 @@ export default function RecipeDetail() {
 
     const foodElements = food.map(item => {
         return (
-            <div key={item.idMeal} className="recipe-details-container">
+            <div key={item.idMeal} className="detail-container">
                 <h1 className="detail-name">{item.strMeal}</h1>
                 <img className="detail-image" src={item.strMealThumb} alt="Food item" />
                 <h2 className="ingredients-heading">Ingredients:</h2>

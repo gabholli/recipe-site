@@ -417,6 +417,10 @@ footer {
     font-size: var(--font-size-small-laptop-base);
   }
 
+  .ingredients-list {
+    padding: 0 1.4em;
+  }
+
   .ingredients-list>li {
     font-size: var(--font-size-small-laptop-smallest);
   }
@@ -476,6 +480,10 @@ footer {
 
   .ingredients-heading {
     font-size: var(--font-size-large-laptop-large);
+  }
+
+  .ingredients-list {
+    padding: 0 1.9em;
   }
 
   .ingredients-list>li {

@@ -52,7 +52,7 @@ export default function RecipeDetail() {
                     <li>{item.strMeasure19} {item.strIngredient19}</li>
                     <li>{item.strMeasure20} {item.strIngredient20}</li>
                 </ul>
-                <hr></hr>
+                <h1 className="instructions-heading">Instructions:</h1>
                 <p className="recipe-instructions">{item.strInstructions}</p>
             </div>
         )

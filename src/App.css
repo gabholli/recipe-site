@@ -91,7 +91,7 @@ footer {
 input,
 button {
   border-radius: 15px;
-  padding: 1em;
+  padding: .5em;
   background-color: #EDEDED;
 }
 

@@ -1,13 +1,12 @@
 import React from "react"
 import { useState, useEffect } from "react"
-import { Link, useSearchParams } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 export default function Recipes() {
     const [foodData, setFoodData] = useState([])
-    const [searchParams, setSearchParams] = useSearchParams()
 
     useEffect(() => {
-        fetch("https://www.themealdb.com/api/json/v1/1/search.php?f=c")
+        fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=c")
             .then(response => {
                 if (!response.ok) {
                     throw Error("Data not available")

@@ -29,6 +29,7 @@ body {
   --font-size-mobile-subtext: 1rem;
   --font-size-heading-mobile-detail: 2.1rem;
   --font-size-heading-mobile-ingredients: 2.1rem;
+  --font-size-list-item-mobile-ingredients: 2.1rem;
   --font-size-mobile-instructions: 1.1rem;
 
 
@@ -37,6 +38,7 @@ body {
   --font-size-tablet-subtext: 1.3rem;
   --font-size-heading-tablet-detail: 2.5rem;
   --font-size-heading-tablet-ingredients: 2.1rem;
+  --font-size-list-item-tablet-ingredients: 2.1rem;
   --font-size-tablet-instructions: 1.1rem;
 
 
@@ -46,6 +48,7 @@ body {
   --font-size-small-laptop-subtext: 1.5rem;
   --font-size-heading-small-laptop-detail: 2.5rem;
   --font-size-heading-small-laptop-ingredients: 2.1rem;
+  --font-size-list-item-small-laptop-ingredients: 2.1rem;
   --font-size-small-laptop-instructions: 1.8rem;
 
   /* Large laptop font sizes */
@@ -54,6 +57,7 @@ body {
   --font-size-large-laptop-subtext: 1.8rem;
   --font-size-heading-large-laptop-detail: 3rem;
   --font-size-heading-large-laptop-ingredients: 2.1rem;
+  --font-size-list-item-large-laptop-ingredients: 2.1rem;
   --font-size-large-laptop-instructions: 2.2rem;
 
   /* 4k font sizes */
@@ -62,6 +66,7 @@ body {
   --font-size-4k-subtext: 3.8rem;
   --font-size-heading-4k-detail: 7.8rem;
   --font-size-heading-4k-ingredients: 2.1rem;
+  --font-size-list-item-4k-ingredients: 2.1rem;
   --font-size-4k-instructions: 4.9rem;
 }
 
@@ -210,6 +215,10 @@ form {
   line-height: 1.3;
 }
 
+.ingredients-list>p {
+  font-size: var(--font-size-list-item-mobile-ingredients);
+}
+
 .recipe-instructions {
   padding: 1em;
   line-height: 1.6;
@@ -279,6 +288,10 @@ footer {
     font-size: var(--font-size-heading-tablet-ingredients);
   }
 
+  .ingredients-list>p {
+    font-size: var(--font-size-list-item-tablet-ingredients);
+  }
+
   .recipe-instructions {
     padding: 1em;
     line-height: 1.6;
@@ -316,6 +329,10 @@ footer {
 
   .ingredients-heading {
     font-size: var(--font-size-heading-small-laptop-ingredients);
+  }
+
+  .ingredients-list>p {
+    font-size: var(--font-size-list-item-small-laptop-ingredients);
   }
 
   .recipe-instructions {
@@ -358,6 +375,10 @@ footer {
     font-size: var(--font-size-heading-large-laptop-ingredients);
   }
 
+  .ingredients-list>p {
+    font-size: var(--font-size-list-item-large-laptop-ingredients);
+  }
+
   .recipe-instructions {
     padding: 1em;
     line-height: 1.6;
@@ -392,6 +413,10 @@ footer {
 
   .ingredients-heading {
     font-size: var(--font-size-heading-4k-ingredients)
+  }
+
+  .ingredients-list>p {
+    font-size: var(--font-size-list-item-4k-ingredients);
   }
 
   .recipe-instructions {

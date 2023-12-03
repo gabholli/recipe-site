@@ -188,6 +188,7 @@ button {
   grid-template-areas:
     "detail-name"
     "detail-image"
+    "youtube-link"
     "ingredients-heading"
     "ingredients-list";
 }
@@ -207,6 +208,13 @@ button {
   max-width: 265px;
   object-fit: cover;
   object-position: center;
+}
+
+.youtube-link {
+  grid-area: youtube-link;
+  font-size: var(--font-size-mobile-small);
+  text-align: center;
+  margin-top: 1em;
 }
 
 .ingredients-heading {
@@ -363,6 +371,10 @@ footer {
     max-width: 550px;
   }
 
+  .youtube-link {
+    font-size: var(--font-size-small-laptop-base);
+  }
+
   .ingredients-heading {
     font-size: var(--font-size-small-laptop-large);
   }
@@ -418,6 +430,10 @@ footer {
     max-width: 800px;
   }
 
+  .youtube-link {
+    font-size: var(--font-size-large-laptop-base);
+  }
+
   .ingredients-heading {
     font-size: var(--font-size-large-laptop-large);
   }
@@ -471,6 +487,10 @@ footer {
 
   .detail-image {
     width: 2500px;
+  }
+
+  .youtube-link {
+    font-size: var(--font-size-base-4k);
   }
 
   .ingredients-heading {

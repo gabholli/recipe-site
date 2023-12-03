@@ -26,6 +26,7 @@ export default function RecipeDetail() {
             <div key={item.idMeal} className="detail-container">
                 <h1 className="detail-name">{item.strMeal}</h1>
                 <img className="detail-image" src={item.strMealThumb} alt="Food item" />
+                <Link className="youtube-link" to={item.strYoutube}>Recipe YouTube Video</Link>
                 <h2 className="ingredients-heading">Ingredients:</h2>
                 <div className="ingredients-list">
                     <p>{item.strMeasure1} {item.strIngredient1}</p>

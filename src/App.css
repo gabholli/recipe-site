@@ -253,7 +253,6 @@ button:active {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   line-height: 1.1;
   gap: 2em;
   padding: 1em;
@@ -356,6 +355,10 @@ footer {
 
   .ingredients-heading {
     font-size: var(--font-size-tablet-base);
+  }
+
+  .ingredients-list {
+    justify-content: center;
   }
 
   .ingredients-list>li {

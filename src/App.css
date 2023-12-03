@@ -84,7 +84,7 @@ body {
 header,
 footer {
   background-color: #EDEDED;
-  padding: .2em;
+  padding: .7em;
   width: 100%;
 }
 
@@ -361,6 +361,14 @@ footer {
 
 @media (min-width: 1024px) {
 
+  header {
+    padding: 1em;
+  }
+
+  footer {
+    padding: .5em;
+  }
+
   .link,
   footer {
     font-size: var(--font-size-small-laptop-base);
@@ -482,6 +490,10 @@ footer {
 }
 
 @media (min-width: 2560px) {
+
+  header {
+    padding: 1.5em;
+  }
 
   .link,
   footer {

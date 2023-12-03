@@ -76,14 +76,14 @@ body {
 
 .link,
 .header-link {
-  color: white;
+  color: black;
   text-decoration: none;
   cursor: pointer;
 }
 
 header,
 footer {
-  background-color: #2A2A2A;
+  background-color: #EDEDED;
   padding: .7em;
   width: 100%;
 }
@@ -92,6 +92,7 @@ input,
 button {
   border-radius: 15px;
   padding: 1em;
+  background-color: #EDEDED;
 }
 
 hr {
@@ -157,15 +158,14 @@ form {
 
 button {
   cursor: pointer;
-  background-color: white;
 }
 
 button:hover {
-  background-color: #D5D5D5;
+  background-color: #DBDBDB;
 }
 
 button:active {
-  background-color: #555555;
+  background-color: #C8C8C8;
 }
 
 .recipe-list-container {

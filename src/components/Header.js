@@ -19,16 +19,7 @@ export default function Header() {
                     Recipes
                 </NavLink>
             </nav>
-            <form>
-                <input type="text"
-                    placeholder="Enter dish name"
-                    // onChange={props.handleChange}    
-                    name="search"
-                // value={props.search}
-                >
-                </input>
-                <button>Search</button>
-            </form>
+
         </header>
     )
 }

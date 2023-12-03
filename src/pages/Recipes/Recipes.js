@@ -41,8 +41,23 @@ export default function Recipes() {
 
 
     return (
-        <div className="recipe-list-container">
-            {recipeElements}
+        <div className="recipe-list-wrapper">
+            <form>
+                <input type="text"
+                    placeholder="Enter dish name"
+                    // onChange={props.handleChange}    
+                    name="search"
+                // value={props.search}
+                >
+                </input>
+                <button>Search</button>
+            </form>
+            {foodData ? (
+                <div className="recipe-list-container">
+                    {recipeElements}
+                </div>
+            ) : <h1>Loading...</h1>}
+
         </div>
     )
 }

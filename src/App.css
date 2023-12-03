@@ -405,17 +405,17 @@ footer {
   }
 
   .ingredients-heading {
-    font-size: var(--font-size-small-laptop-large);
+    font-size: var(--font-size-small-laptop-base);
   }
 
   .ingredients-list>p {
-    font-size: var(--font-size-small-laptop-smaller);
+    font-size: var(--font-size-small-laptop-smallest);
   }
 
   .recipe-instructions {
     padding: 1em;
     line-height: 1.6;
-    font-size: var(--font-size-small-laptop-small);
+    font-size: var(--font-size-small-laptop-smallest);
   }
 
 
@@ -472,13 +472,13 @@ footer {
   }
 
   .ingredients-list>p {
-    font-size: var(--font-size-large-laptop-small);
+    font-size: var(--font-size-large-laptop-smaller);
   }
 
   .recipe-instructions {
     padding: 1em;
     line-height: 1.6;
-    font-size: var(--font-size-large-laptop-small);
+    font-size: var(--font-size-large-laptop-smaller);
   }
 
 
@@ -531,16 +531,16 @@ footer {
   }
 
   .ingredients-heading {
-    font-size: var(--font-size-4k-large)
+    font-size: var(--font-size-base-4k)
   }
 
   .ingredients-list>p {
-    font-size: var(--font-size-4k-small);
+    font-size: var(--font-size-4k-smaller);
   }
 
   .recipe-instructions {
     padding: 1em;
     line-height: 1.6;
-    font-size: var(--font-size-4k-small);
+    font-size: var(--font-size-4k-smaller);
   }
 }

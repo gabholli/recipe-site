@@ -13,19 +13,21 @@ export default function Recipes() {
     }
 
     useEffect(() => {
-        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
-            .then(response => {
-                if (!response.ok) {
-                    throw Error("Data not available")
-                }
-                return response.json()
-            })
-            .then(data => {
-                console.log(data)
-                setFoodData(data.meals)
-            })
-            .catch(error =>
-                console.log("Fetch error: ", error))
+        if (search.length > 0) {
+            fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw Error("Data not available")
+                    }
+                    return response.json()
+                })
+                .then(data => {
+                    console.log(data)
+                    setFoodData(data.meals)
+                })
+                .catch(error =>
+                    console.log("Fetch error: ", error))
+        }
     }, [search])
 
     const recipeElements = foodData?.map(meal => (
@@ -64,7 +66,6 @@ export default function Recipes() {
                     {recipeElements}
                 </div>
             ) : <h1>No data currently...</h1>}
-
         </div>
     )
 }

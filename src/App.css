@@ -25,50 +25,46 @@ body {
 
 :root {
   /* Mobile font sizes */
-  --font-size-heading-mobile: 1.7rem;
-  --font-size-mobile-subtext: 1rem;
-  --font-size-heading-mobile-detail: 2.1rem;
-  --font-size-heading-mobile-ingredients: 1.9rem;
-  --font-size-list-item-mobile-ingredients: 1.1rem;
-  --font-size-mobile-instructions: 1.1rem;
+  --font-size-mobile-smallest: 1rem;
+  --font-size-mobile-smaller: 1.1rem;
+  --font-size-mobile-small: 1.7rem;
+  --font-size-mobile-base: 1.9rem;
+  --font-size-mobile-large: 2.1rem;
 
 
   /* Tablet font sizes */
-  --font-size-tablet-link: 1.3rem;
-  --font-size-heading-tablet: 2rem;
-  --font-size-tablet-subtext: 1.3rem;
-  --font-size-heading-tablet-detail: 2.5rem;
-  --font-size-heading-tablet-ingredients: 2.2rem;
-  --font-size-list-item-tablet-ingredients: 1.3rem;
-  --font-size-tablet-instructions: 1.3rem;
+  --font-size-tablet-smallest: 1.3rem;
+  --font-size-tablet-small: 2rem;
+  --font-size-tablet-base: 2.2rem;
+  --font-size-tablet-large: 2.5rem;
 
 
   /* Small laptop font sizes */
-  --font-size-small-laptop-link: 1.5rem;
-  --font-size-heading-small-laptop: 2.5rem;
-  --font-size-small-laptop-subtext: 1.5rem;
-  --font-size-heading-small-laptop-detail: 3rem;
-  --font-size-heading-small-laptop-ingredients: 2.7rem;
-  --font-size-list-item-small-laptop-ingredients: 1.8rem;
-  --font-size-small-laptop-instructions: 1.8rem;
+  --font-size-small-laptop-smallest: 1.5rem;
+  --font-size-small-laptop-smaller: 1.8rem;
+  --font-size-small-laptop-small: 1.8rem;
+  --font-size-small-laptop-base: 2.5rem;
+  --font-size-small-laptop-large: 2.7rem;
+  --font-size-small-laptop-larger: 3rem;
 
   /* Large laptop font sizes */
-  --font-size-large-laptop-link: 1.2rem;
-  --font-size-heading-large-laptop: 3rem;
-  --font-size-large-laptop-subtext: 1.8rem;
-  --font-size-heading-large-laptop-detail: 4rem;
-  --font-size-heading-large-laptop-ingredients: 3.8rem;
-  --font-size-list-item-large-laptop-ingredients: 2.2rem;
-  --font-size-large-laptop-instructions: 2.2rem;
+  --font-size-large-laptop-smallest: 1.2rem;
+  --font-size-large-laptop-smaller: 1.8rem;
+  --font-size-large-laptop-small: 2.2rem;
+  --font-size-large-laptop-base: 3rem;
+  --font-size-large-laptop-large: 3.8rem;
+  --font-size-large-laptop-larger: 4rem;
+
+
 
   /* 4k font sizes */
-  --font-size-4k-link: 3rem;
-  --font-size-heading-4k: 6rem;
-  --font-size-4k-subtext: 3.8rem;
-  --font-size-heading-4k-detail: 7.8rem;
-  --font-size-heading-4k-ingredients: 7.2rem;
-  --font-size-list-item-4k-ingredients: 4.9rem;
-  --font-size-4k-instructions: 4.9rem;
+  --font-size-4k-smallest: 3rem;
+  --font-size-4k-smaller: 3.8rem;
+  --font-size-4k-small: 4.9rem;
+  --font-size-base-4k: 6rem;
+  --font-size-4k-large: 7.2rem;
+  --font-size-4k-larger: 7.8rem;
+
 }
 
 /* General rules */
@@ -129,12 +125,12 @@ nav {
 
 .home-heading {
   grid-area: title;
-  font-size: var(--font-size-heading-mobile);
+  font-size: var(--font-size-mobile-small);
 }
 
 .home-subtext {
   grid-area: subtext;
-  font-size: var(--font-size-mobile-subtext);
+  font-size: var(--font-size-mobile-smallest);
 }
 
 /* Recipes rules */
@@ -148,7 +144,13 @@ nav {
 form {
   display: flex;
   margin-top: 3em;
-  gap: .5em;
+  gap: .2em;
+}
+
+input,
+button {
+  padding: 1em;
+  border-radius: 5px;
 }
 
 .recipe-list-container {
@@ -189,7 +191,7 @@ form {
 .detail-name {
   text-align: center;
   grid-area: detail-name;
-  font-size: var(--font-size-heading-mobile-detail);
+  font-size: var(--font-size-mobile-large);
 }
 
 .detail-image {
@@ -205,7 +207,7 @@ form {
 
 .ingredients-heading {
   grid-area: ingredients-heading;
-  font-size: var(--font-size-heading-mobile-ingredients);
+  font-size: var(--font-size-mobile-base);
   text-align: center;
 }
 
@@ -216,13 +218,13 @@ form {
 }
 
 .ingredients-list>p {
-  font-size: var(--font-size-list-item-mobile-ingredients);
+  font-size: var(--font-size-mobile-smaller);
 }
 
 .recipe-instructions {
   padding: 1em;
   line-height: 1.6;
-  font-size: var(--font-size-mobile-instructions)
+  font-size: var(--font-size-mobile-smaller)
 }
 
 /* Footer rules */
@@ -240,7 +242,7 @@ footer {
 
   .link,
   footer {
-    font-size: var(--font-size-tablet-link);
+    font-size: var(--font-size-tablet-smallest);
   }
 
   header {
@@ -265,6 +267,13 @@ footer {
     gap: 1em;
   }
 
+  input,
+  button {
+    padding: 1em;
+    font-size: 2rem;
+    border-radius: 5px;
+  }
+
   .food-image {
     object-fit: cover;
     object-position: center;
@@ -273,21 +282,21 @@ footer {
   }
 
   .home-heading {
-    font-size: var(--font-size-heading-tablet);
+    font-size: var(--font-size-tablet-small);
   }
 
   .home-subtext {
-    font-size: var(--font-size-tablet-subtext);
+    font-size: var(--ffont-size-tablet-smallest);
   }
 
   .food-name {
-    font-size: var(--font-size-heading-tablet);
+    font-size: var(--font-size-tablet-small);
   }
 
   .detail-name {
     text-align: center;
     grid-area: detail-name;
-    font-size: var(--font-size-heading-tablet-detail);
+    font-size: var(--font-size-tablet-large);
   }
 
   .detail-image {
@@ -295,17 +304,17 @@ footer {
   }
 
   .ingredients-heading {
-    font-size: var(--font-size-heading-tablet-ingredients);
+    font-size: var(--font-size-tablet-base);
   }
 
   .ingredients-list>p {
-    font-size: var(--font-size-list-item-tablet-ingredients);
+    font-size: var(--font-size-tablet-smallest);
   }
 
   .recipe-instructions {
     padding: 1em;
     line-height: 1.6;
-    font-size: var(--font-size-tablet-instructions);
+    font-size: var(--font-size-tablet-smallest);
   }
 
 }
@@ -314,15 +323,15 @@ footer {
 
   .link,
   footer {
-    font-size: var(--font-size-small-laptop-link);
+    font-size: var(--font-size-small-laptop-smallest);
   }
 
   .home-heading {
-    font-size: var(--font-size-heading-small-laptop);
+    font-size: var(--font-size-small-laptop-base);
   }
 
   .home-subtext {
-    font-size: var(--font-size-small-laptop-subtext);
+    font-size: var(--font-size-small-laptop-smallest);
   }
 
   .food-image {
@@ -330,13 +339,13 @@ footer {
   }
 
   .food-name {
-    font-size: var(--font-size-heading-small-laptop);
+    font-size: var(--font-size-small-laptop-base);
   }
 
   .detail-name {
     text-align: center;
     grid-area: detail-name;
-    font-size: var(--font-size-heading-small-laptop-detail);
+    font-size: var(--font-size-small-laptop-larger);
   }
 
   .detail-image {
@@ -344,17 +353,17 @@ footer {
   }
 
   .ingredients-heading {
-    font-size: var(--font-size-heading-small-laptop-ingredients);
+    font-size: var(--font-size-small-laptop-large);
   }
 
   .ingredients-list>p {
-    font-size: var(--font-size-list-item-small-laptop-ingredients);
+    font-size: var(--font-size-small-laptop-smaller);
   }
 
   .recipe-instructions {
     padding: 1em;
     line-height: 1.6;
-    font-size: var(--font-size-small-laptop-instructions);
+    font-size: var(--font-size-small-laptop-small);
   }
 
 
@@ -368,15 +377,15 @@ footer {
   }
 
   .home-heading {
-    font-size: var(--font-size-heading-large-laptop);
+    font-size: var(--font-size-large-laptop-base);
   }
 
   .home-subtext {
-    font-size: var(--font-size-large-laptop-subtext);
+    font-size: var(--font-size-large-laptop-smaller);
   }
 
   .food-name {
-    font-size: var(--font-size-heading-large-laptop);
+    font-size: var(--font-size-large-laptop-base);
   }
 
   .food-image {
@@ -386,7 +395,7 @@ footer {
   .detail-name {
     text-align: center;
     grid-area: detail-name;
-    font-size: var(--font-size-heading-large-laptop-detail);
+    font-size: var(--font-size-large-laptop-larger);
   }
 
   .detail-image {
@@ -394,17 +403,17 @@ footer {
   }
 
   .ingredients-heading {
-    font-size: var(--font-size-heading-large-laptop-ingredients);
+    font-size: var(--font-size-large-laptop-large);
   }
 
   .ingredients-list>p {
-    font-size: var(--font-size-list-item-large-laptop-ingredients);
+    font-size: var(--font-size-large-laptop-small);
   }
 
   .recipe-instructions {
     padding: 1em;
     line-height: 1.6;
-    font-size: var(--font-size-large-laptop-instructions);
+    font-size: var(--font-size-large-laptop-small);
   }
 
 
@@ -414,25 +423,25 @@ footer {
 
   .link,
   footer {
-    font-size: var(--font-size-4k-link);
+    font-size: var(--font-size-4k-smallest);
   }
 
   .home-heading {
-    font-size: var(--font-size-heading-4k);
+    font-size: var(--font-size-base-4k);
   }
 
   .home-subtext {
-    font-size: var(--font-size-4k-subtext);
+    font-size: var(--font-size-4k-smaller);
   }
 
   .food-name {
-    font-size: var(--font-size-heading-4k);
+    font-size: var(--font-size-base-4k);
   }
 
   .detail-name {
     text-align: center;
     grid-area: detail-name;
-    font-size: var(--font-size-heading-4k-detail);
+    font-size: var(--font-size-4k-larger);
   }
 
   .detail-image {
@@ -440,16 +449,16 @@ footer {
   }
 
   .ingredients-heading {
-    font-size: var(--font-size-heading-4k-ingredients)
+    font-size: var(--font-size-4k-large)
   }
 
   .ingredients-list>p {
-    font-size: var(--font-size-list-item-4k-ingredients);
+    font-size: var(--font-size-4k-small);
   }
 
   .recipe-instructions {
     padding: 1em;
     line-height: 1.6;
-    font-size: var(--font-size-4k-instructions);
+    font-size: var(--font-size-4k-small);
   }
 }

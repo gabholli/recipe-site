@@ -4,9 +4,16 @@ import { Link } from "react-router-dom"
 
 export default function Recipes() {
     const [foodData, setFoodData] = useState([])
+    const [search, setSearch] = useState("")
+
+    function handleSubmit(event) {
+        event.preventDefault()
+        console.log(search)
+        setSearch(event.target.search.value)
+    }
 
     useEffect(() => {
-        fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=chicken")
+        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
             .then(response => {
                 if (!response.ok) {
                     throw Error("Data not available")
@@ -19,7 +26,7 @@ export default function Recipes() {
             })
             .catch(error =>
                 console.log("Fetch error: ", error))
-    }, [])
+    }, [search])
 
     const recipeElements = foodData?.map(meal => (
         <div key={meal.idMeal} className="food-tile">
@@ -42,7 +49,7 @@ export default function Recipes() {
 
     return (
         <div className="recipe-list-wrapper">
-            <form>
+            <form onSubmit={handleSubmit}>
                 <input type="text"
                     placeholder="Enter dish name"
                     // onChange={props.handleChange}    

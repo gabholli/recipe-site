@@ -6,7 +6,7 @@ export default function Recipes() {
     const [foodData, setFoodData] = useState([])
 
     useEffect(() => {
-        fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=c")
+        fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=chicken")
             .then(response => {
                 if (!response.ok) {
                     throw Error("Data not available")

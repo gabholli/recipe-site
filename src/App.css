@@ -253,7 +253,7 @@ button:active {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  text-align: center;
+  justify-content: center;
   line-height: 1.1;
   gap: 2em;
   padding: 1em;
@@ -271,6 +271,7 @@ button:active {
 
 .recipe-instructions {
   grid-area: instructions;
+  text-indent: 2em;
   padding: 0 1em 1em;
   line-height: 1.6;
   font-size: var(--font-size-mobile-smaller)

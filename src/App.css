@@ -222,7 +222,7 @@ button:active {
   margin: 0 auto;
   grid-area: detail-image;
   min-height: 265px;
-  border-radius: 5px;
+  border-radius: 20px;
   max-width: 265px;
   object-fit: cover;
   object-position: center;

@@ -28,8 +28,8 @@ body {
   --font-size-heading-mobile: 1.7rem;
   --font-size-mobile-subtext: 1rem;
   --font-size-heading-mobile-detail: 2.1rem;
-  --font-size-heading-mobile-ingredients: 2.1rem;
-  --font-size-list-item-mobile-ingredients: 2.1rem;
+  --font-size-heading-mobile-ingredients: 1.9rem;
+  --font-size-list-item-mobile-ingredients: 1.1rem;
   --font-size-mobile-instructions: 1.1rem;
 
 
@@ -37,27 +37,27 @@ body {
   --font-size-heading-tablet: 2rem;
   --font-size-tablet-subtext: 1.3rem;
   --font-size-heading-tablet-detail: 2.5rem;
-  --font-size-heading-tablet-ingredients: 2.1rem;
-  --font-size-list-item-tablet-ingredients: 2.1rem;
-  --font-size-tablet-instructions: 1.1rem;
+  --font-size-heading-tablet-ingredients: 2.2rem;
+  --font-size-list-item-tablet-ingredients: 1.3rem;
+  --font-size-tablet-instructions: 1.3rem;
 
 
   /* Small laptop font sizes */
   --font-size-small-laptop-link: 1.2rem;
   --font-size-heading-small-laptop: 2.5rem;
   --font-size-small-laptop-subtext: 1.5rem;
-  --font-size-heading-small-laptop-detail: 2.5rem;
-  --font-size-heading-small-laptop-ingredients: 2.1rem;
-  --font-size-list-item-small-laptop-ingredients: 2.1rem;
+  --font-size-heading-small-laptop-detail: 3rem;
+  --font-size-heading-small-laptop-ingredients: 2.7rem;
+  --font-size-list-item-small-laptop-ingredients: 1.8rem;
   --font-size-small-laptop-instructions: 1.8rem;
 
   /* Large laptop font sizes */
   --font-size-large-laptop-link: 1.5rem;
   --font-size-heading-large-laptop: 3rem;
   --font-size-large-laptop-subtext: 1.8rem;
-  --font-size-heading-large-laptop-detail: 3rem;
-  --font-size-heading-large-laptop-ingredients: 2.1rem;
-  --font-size-list-item-large-laptop-ingredients: 2.1rem;
+  --font-size-heading-large-laptop-detail: 4rem;
+  --font-size-heading-large-laptop-ingredients: 3.8rem;
+  --font-size-list-item-large-laptop-ingredients: 2.2rem;
   --font-size-large-laptop-instructions: 2.2rem;
 
   /* 4k font sizes */
@@ -65,8 +65,8 @@ body {
   --font-size-heading-4k: 6rem;
   --font-size-4k-subtext: 3.8rem;
   --font-size-heading-4k-detail: 7.8rem;
-  --font-size-heading-4k-ingredients: 2.1rem;
-  --font-size-list-item-4k-ingredients: 2.1rem;
+  --font-size-heading-4k-ingredients: 7.2rem;
+  --font-size-list-item-4k-ingredients: 4.9rem;
   --font-size-4k-instructions: 4.9rem;
 }
 

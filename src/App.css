@@ -149,8 +149,8 @@ form {
 
 input,
 button {
-  padding: 1em;
   border-radius: 5px;
+  padding: 1em;
 }
 
 .recipe-list-container {
@@ -162,10 +162,14 @@ button {
   padding: 3em 1em;
 }
 
+.food-tile {
+  max-width: 1000px;
+}
+
 .food-image {
   grid-area: image;
   height: 250px;
-  max-width: 250px;
+  width: 90%;
   display: block;
   margin: 0 auto;
 }
@@ -260,6 +264,7 @@ footer {
 
   .recipe-list-container {
     display: grid;
+    grid-auto-columns: 1fr;
     grid-template-areas:
       ". image ."
       ". name .";
@@ -269,15 +274,12 @@ footer {
 
   input,
   button {
-    padding: 1em;
-    font-size: 2rem;
-    border-radius: 5px;
+    font-size: var(--font-size-tablet-smallest);
   }
 
   .food-image {
     object-fit: cover;
     object-position: center;
-    height: 225px;
     border-radius: 5px;
   }
 
@@ -286,7 +288,11 @@ footer {
   }
 
   .home-subtext {
-    font-size: var(--ffont-size-tablet-smallest);
+    font-size: var(--font-size-tablet-smallest);
+  }
+
+  .food-image {
+    height: 200px;
   }
 
   .food-name {
@@ -332,6 +338,11 @@ footer {
 
   .home-subtext {
     font-size: var(--font-size-small-laptop-smallest);
+  }
+
+  input,
+  button {
+    font-size: var(--font-size-small-laptop-small);
   }
 
   .food-image {
@@ -384,12 +395,17 @@ footer {
     font-size: var(--font-size-large-laptop-smaller);
   }
 
-  .food-name {
-    font-size: var(--font-size-large-laptop-base);
+  input,
+  button {
+    font-size: var(--font-size-large-laptop-small);
   }
 
   .food-image {
-    height: 300px;
+    height: 350px;
+  }
+
+  .food-name {
+    font-size: var(--font-size-large-laptop-base);
   }
 
   .detail-name {
@@ -432,6 +448,15 @@ footer {
 
   .home-subtext {
     font-size: var(--font-size-4k-smaller);
+  }
+
+  input,
+  button {
+    font-size: var(--font-size-4k-smaller);
+  }
+
+  .food-image {
+    height: 600px;
   }
 
   .food-name {

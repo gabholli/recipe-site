@@ -31,27 +31,27 @@ export default function RecipeDetail() {
                 </Link>
                     : <p className="no-video-text">(No YouTube Video)</p>}
                 <h2 className="ingredients-heading">Ingredients:</h2>
-                <ul className="ingredients-list">
-                    <li>{item.strMeasure1} {item.strIngredient1}</li>
-                    <li>{item.strMeasure2} {item.strIngredient2}</li>
-                    <li>{item.strMeasure3} {item.strIngredient3}</li>
-                    <li>{item.strMeasure5} {item.strIngredient5}</li>
-                    <li>{item.strMeasure6} {item.strIngredient6}</li>
-                    <li>{item.strMeasure7} {item.strIngredient7}</li>
-                    <li>{item.strMeasure8} {item.strIngredient8}</li>
-                    <li>{item.strMeasure9} {item.strIngredient9}</li>
-                    <li>{item.strMeasure10} {item.strIngredient10}</li>
-                    <li>{item.strMeasure11} {item.strIngredient11}</li>
-                    <li>{item.strMeasure12} {item.strIngredient12}</li>
-                    <li>{item.strMeasure13} {item.strIngredient13}</li>
-                    <li>{item.strMeasure14} {item.strIngredient14}</li>
-                    <li>{item.strMeasure15} {item.strIngredient15}</li>
-                    <li>{item.strMeasure16} {item.strIngredient16}</li>
-                    <li>{item.strMeasure17} {item.strIngredient17}</li>
-                    <li>{item.strMeasure18} {item.strIngredient18}</li>
-                    <li>{item.strMeasure19} {item.strIngredient19}</li>
-                    <li>{item.strMeasure20} {item.strIngredient20}</li>
-                </ul>
+                <div className="ingredients-list">
+                    <p>{item.strMeasure1} {item.strIngredient1}</p>
+                    <p>{item.strMeasure2} {item.strIngredient2}</p>
+                    <p>{item.strMeasure3} {item.strIngredient3}</p>
+                    <p>{item.strMeasure5} {item.strIngredient5}</p>
+                    <p>{item.strMeasure6} {item.strIngredient6}</p>
+                    <p>{item.strMeasure7} {item.strIngredient7}</p>
+                    <p>{item.strMeasure8} {item.strIngredient8}</p>
+                    <p>{item.strMeasure9} {item.strIngredient9}</p>
+                    <p>{item.strMeasure10} {item.strIngredient10}</p>
+                    <p>{item.strMeasure11} {item.strIngredient11}</p>
+                    <p>{item.strMeasure12} {item.strIngredient12}</p>
+                    <p>{item.strMeasure13} {item.strIngredient13}</p>
+                    <p>{item.strMeasure14} {item.strIngredient14}</p>
+                    <p>{item.strMeasure15} {item.strIngredient15}</p>
+                    <p>{item.strMeasure16} {item.strIngredient16}</p>
+                    <p>{item.strMeasure17} {item.strIngredient17}</p>
+                    <p>{item.strMeasure18} {item.strIngredient18}</p>
+                    <p>{item.strMeasure19} {item.strIngredient19}</p>
+                    <p>{item.strMeasure20} {item.strIngredient20}</p>
+                </div>
                 <h1 className="instructions-heading">Instructions:</h1>
                 <p className="recipe-instructions">{item.strInstructions}</p>
             </div>

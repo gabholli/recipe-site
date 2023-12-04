@@ -29,7 +29,7 @@ export default function RecipeDetail() {
                 {item.strYoutube ? <Link className="youtube-link" to={item.strYoutube}>
                     Recipe YouTube Video
                 </Link>
-                    : <p className="no-video-text">(No YouTube Video)</p>}
+                    : ""}
                 <h2 className="ingredients-heading">Ingredients:</h2>
                 <div className="ingredients-list">
                     <p>{item.strMeasure1} {item.strIngredient1}</p>

@@ -382,7 +382,7 @@ footer {
   }
 
   .detail-image {
-    max-width: 450px;
+    max-width: 250px;
   }
 
   .ingredients-heading {
@@ -446,7 +446,7 @@ footer {
   }
 
   .detail-image {
-    max-width: 550px;
+    max-width: 450px;
   }
 
   .youtube-link {
@@ -515,7 +515,7 @@ footer {
   }
 
   .detail-image {
-    max-width: 800px;
+    max-width: 400px;
   }
 
   .youtube-link {
@@ -588,7 +588,7 @@ footer {
   }
 
   .detail-image {
-    width: 2500px;
+    max-width: 800px;
   }
 
   .youtube-link {

@@ -87,20 +87,12 @@ body {
   cursor: pointer;
 }
 
-/* header,
+header,
 footer,
 input,
 button {
-  background: hsla(0, 0%, 93%, 1);
-
-  background: linear-gradient(90deg, hsla(0, 0%, 93%, 1) 3%, hsla(0, 0%, 86%, 1) 100%);
-
-  background: -moz-linear-gradient(90deg, hsla(0, 0%, 93%, 1) 3%, hsla(0, 0%, 86%, 1) 100%);
-
-  background: -webkit-linear-gradient(90deg, hsla(0, 0%, 93%, 1) 3%, hsla(0, 0%, 86%, 1) 100%);
-
-  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#EDEDED", endColorstr="#DBDBDB", GradientType=1);
-} */
+  background-color: #FFEAD0;
+}
 
 header,
 footer {

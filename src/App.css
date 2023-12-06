@@ -110,7 +110,7 @@ footer {
 
 input,
 button {
-  border-radius: 15px;
+  border-radius: 5px;
   padding: .5em;
   font-family: Hedvig, serif;
 }
@@ -223,7 +223,7 @@ button:active {
   width: 90%;
   display: block;
   margin: 0 auto;
-  border-radius: 20px;
+  border-radius: 5px;
 }
 
 .food-name {
@@ -258,7 +258,7 @@ button:active {
   margin: 0 auto;
   grid-area: detail-image;
   min-height: 265px;
-  border-radius: 20px;
+  border-radius: 5px;
   max-width: 265px;
   object-fit: cover;
   object-position: center;

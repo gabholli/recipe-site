@@ -87,7 +87,7 @@ body {
   cursor: pointer;
 }
 
-header,
+/* header,
 footer,
 input,
 button {
@@ -100,7 +100,7 @@ button {
   background: -webkit-linear-gradient(90deg, hsla(0, 0%, 93%, 1) 3%, hsla(0, 0%, 86%, 1) 100%);
 
   filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#EDEDED", endColorstr="#DBDBDB", GradientType=1);
-}
+} */
 
 header,
 footer {

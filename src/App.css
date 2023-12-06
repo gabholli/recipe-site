@@ -389,6 +389,13 @@ footer {
     font-size: var(--font-size-tablet-base);
   }
 
+  .ingredients-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+  }
+
   .ingredients-list>p {
     font-size: var(--font-size-tablet-smallest);
   }

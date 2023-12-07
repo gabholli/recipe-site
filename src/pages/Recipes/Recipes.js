@@ -3,13 +3,21 @@ import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 
 export default function Recipes() {
+    const foodItemFromLocalStorage = JSON.parse(localStorage.getItem("foodItem"))
     const [foodData, setFoodData] = useState([])
-    const [search, setSearch] = useState("")
+    const [search, setSearch] = useState({
+        foodItem: foodItemFromLocalStorage
+    })
 
     function handleSubmit(event) {
         event.preventDefault()
+        setSearch(event.target.foodItem.value)
+    }
+
+    function handleChange(event) {
+        setSearch({ [event.target.name]: event.target.value })
+        localStorage.setItem("foodItem", JSON.stringify(event.target.value))
         console.log(search)
-        setSearch(event.target.search.value)
     }
 
     useEffect(() => {
@@ -54,9 +62,9 @@ export default function Recipes() {
             <form onSubmit={handleSubmit}>
                 <input type="text"
                     placeholder="Enter dish name"
-                    // onChange={props.handleChange}    
-                    name="search"
-                // value={props.search}
+                    onChange={handleChange}
+                    name="foodItem"
+                    value={search.foodItem || ""}
                 >
                 </input>
                 <button>Search</button>

@@ -64,7 +64,7 @@ export default function Recipes() {
                     placeholder="Enter dish name"
                     onChange={handleChange}
                     name="foodItem"
-                    value={search.foodItem || ""}
+                    value={foodItemFromLocalStorage || ""}
                 >
                 </input>
                 <button>Search</button>

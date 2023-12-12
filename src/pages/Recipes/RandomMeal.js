@@ -20,7 +20,6 @@ export default function RandomMeal() {
             .catch(error =>
                 console.log("Fetch error: ", error))
     }, [])
-    console.log(random)
     return (
         <div className="detail-container">
             <h1 className="detail-name">{random.strMeal}</h1>

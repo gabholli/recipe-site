@@ -24,7 +24,7 @@ export default function RandomMeal() {
     return (
         <div className="detail-container">
             <h1 className="detail-name">{random.strMeal}</h1>
-            <img className="detail-image" src={random.strMealThumb} alt="Food random" />
+            <img className="detail-image" src={random.strMealThumb} alt="Random food item" />
             {random.strYoutube ? <Link className="youtube-link" to={random.strYoutube}>
                 Recipe YouTube Video
             </Link>

@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 export default function Header() {
 
@@ -17,6 +17,12 @@ export default function Header() {
                     className="link"
                 >
                     Recipes
+                </NavLink>
+                <NavLink
+                    to="/random"
+                    className="link"
+                >
+                    Random Meal
                 </NavLink>
             </nav>
 

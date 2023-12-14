@@ -18,6 +18,12 @@ export default function Header() {
                 >
                     Recipes
                 </NavLink>
+                <NavLink
+                    to="/random"
+                    className="link"
+                >
+                    Random Meal
+                </NavLink>
             </nav>
 
         </header>

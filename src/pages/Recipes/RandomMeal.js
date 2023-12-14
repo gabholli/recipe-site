@@ -24,10 +24,12 @@ export default function RandomMeal() {
         <div className="detail-container">
             <h1 className="detail-name">{random.strMeal}</h1>
             <img className="detail-image" src={random.strMealThumb} alt="" />
-            {random.strYoutube ? <Link className="youtube-link" to={random.strYoutube}>
-                Recipe YouTube Video
-            </Link>
-                : ""}
+            {
+                random.strYoutube ? <Link className="youtube-link" to={random.strYoutube}>
+                    Recipe YouTube Video
+                </Link>
+                    : ""
+            }
             <h2 className="ingredients-heading">Ingredients:</h2>
             <div className="ingredients-list">
                 <p>{random.strMeasure1} {random.strIngredient1}</p>
@@ -51,7 +53,7 @@ export default function RandomMeal() {
             </div>
             <h1 className="instructions-heading">Instructions:</h1>
             <p className="recipe-instructions">{random.strInstructions}</p>
-        </div>
+        </div >
 
     )
 }

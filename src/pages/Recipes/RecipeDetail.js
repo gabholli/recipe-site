@@ -4,7 +4,7 @@ import { Link, useParams } from "react-router-dom"
 
 export default function RecipeDetail() {
     const params = useParams()
-    const [food, setFood] = useState([])
+    const [food, setFood] = useState(null)
 
     useEffect(() => {
         fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${params.id}`)
@@ -21,7 +21,7 @@ export default function RecipeDetail() {
                 console.log("Fetch error: ", error))
     }, [params.id])
 
-    const foodElements = food.map(item => {
+    const foodElements = food?.map(item => {
         return (
             <div key={item.idMeal} className="detail-container">
                 <h1 className="detail-name">{item.strMeal}</h1>
@@ -59,12 +59,12 @@ export default function RecipeDetail() {
     })
 
     return (
-        <> {food ? (
-            <div className="detail-container">
-                {foodElements}
-            </div>
-        ) : <h1>Loading...</h1>}
-
+        <>
+            {food ? (
+                <div className="detail-container">
+                    {foodElements}
+                </div>
+            ) : <h1 className="detail-name">Loading...</h1>}
         </>
     )
 }

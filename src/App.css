@@ -87,6 +87,10 @@ body {
   cursor: pointer;
 }
 
+.link:hover {
+  text-decoration: underline;
+}
+
 header,
 footer,
 input,

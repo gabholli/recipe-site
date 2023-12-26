@@ -23,15 +23,15 @@ export default function RecipeDetail() {
 
     const foodElements = food?.map(item => {
         return (
-            <div key={item.idMeal} className="">
-                <h1 className="">{item.strMeal}</h1>
+            <div key={item.idMeal} className="text-center">
+                <h1 className="text-5xl">{item.strMeal}</h1>
                 <img className="" src={item.strMealThumb} alt="Food item" />
-                {item.strYoutube ? <Link className="" to={item.strYoutube}>
+                {item.strYoutube ? <Link className="underline text-4xl" to={item.strYoutube}>
                     Recipe YouTube Video
                 </Link>
                     : ""}
-                <h2 className="">Ingredients:</h2>
-                <div className="">
+                <h2 className="text-3xl">Ingredients:</h2>
+                <div className="text-xl">
                     <p>{item.strMeasure1} {item.strIngredient1}</p>
                     <p>{item.strMeasure2} {item.strIngredient2}</p>
                     <p>{item.strMeasure3} {item.strIngredient3}</p>
@@ -52,8 +52,8 @@ export default function RecipeDetail() {
                     <p>{item.strMeasure19} {item.strIngredient19}</p>
                     <p>{item.strMeasure20} {item.strIngredient20}</p>
                 </div>
-                <h1 className="">Instructions:</h1>
-                <p className="">{item.strInstructions}</p>
+                <h1 className="text-3xl">Instructions:</h1>
+                <p className="text-xl text-left">{item.strInstructions}</p>
             </div>
         )
     })
@@ -61,10 +61,10 @@ export default function RecipeDetail() {
     return (
         <>
             {food ? (
-                <div className="">
+                <div className="bg-yellow-100">
                     {foodElements}
                 </div>
-            ) : <h1 className="">Loading...</h1>}
+            ) : <h1 className="bg-yellow-100 text-center text-2xl">Loading...</h1>}
         </>
     )
 }

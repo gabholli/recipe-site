@@ -23,17 +23,17 @@ export default function RandomMeal() {
     return (
         <>
             {random ? (
-                <div className="">
-                    <h1 className="">{random.strMeal}</h1>
+                <div className="text-center bg-yellow-100">
+                    <h1 className="text-5xl">{random.strMeal}</h1>
                     <img className="" src={random.strMealThumb} alt="Random food" />
                     {
-                        random.strYoutube ? <Link className="" to={random.strYoutube}>
+                        random.strYoutube ? <Link className="underline text-4xl" to={random.strYoutube}>
                             Recipe YouTube Video
                         </Link>
                             : ""
                     }
-                    <h2 className="">Ingredients:</h2>
-                    <div className="">
+                    <h2 className="text-3xl">Ingredients:</h2>
+                    <div className="text-xl">
                         <p>{random.strMeasure1} {random.strIngredient1}</p>
                         <p>{random.strMeasure2} {random.strIngredient2}</p>
                         <p>{random.strMeasure3} {random.strIngredient3}</p>
@@ -53,10 +53,10 @@ export default function RandomMeal() {
                         <p>{random.strMeasure19} {random.strIngredient19}</p>
                         <p>{random.strMeasure20} {random.strIngredient20}</p>
                     </div>
-                    <h1 className="">Instructions:</h1>
-                    <p className="">{random.strInstructions}</p>
+                    <h1 className="text-3xl">Instructions:</h1>
+                    <p className="text-xl text-left">{random.strInstructions}</p>
                 </div >
-            ) : <h1 className="">Loading...</h1>
+            ) : <h1 className="text-center bg-yellow-100">Loading...</h1>
             }
         </>
     )

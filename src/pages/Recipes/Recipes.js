@@ -39,41 +39,42 @@ export default function Recipes() {
     }, [search])
 
     const recipeElements = foodData?.map(meal => (
-        <div key={meal.idMeal} className="food-tile">
+        <div key={meal.idMeal} className="">
             <Link
-                className="link"
+                className="text-center text-2xl"
                 to={meal.idMeal}
             // state={{
             //     search: `?${searchParams.toString()}`,
             //     type: typeFilter
             // }}
             >
-                <img className="food-image"
+                <img className="rounded"
                     src={meal.strMealThumb}
-                    alt="Food item" />
-                <h1 className="food-name">{meal.strMeal}</h1>
+                    alt="" />
+                <h1 className="mt-12">{meal.strMeal}</h1>
             </Link>
         </div>
     ))
 
 
     return (
-        <div className="recipe-list-wrapper">
-            <form onSubmit={handleSubmit}>
-                <input type="text"
+        <div className="bg-yellow-100 py-12">
+            <form className="text-center" onSubmit={handleSubmit}>
+                <input className="border-2 border-gray-500 rounded-lg"
+                    type="text"
                     placeholder="Enter dish name"
                     onChange={handleChange}
                     name="foodItem"
                     value={foodItemFromLocalStorage || ""}
                 >
                 </input>
-                <button>Search</button>
+                <button className="border-2 border-gray-500 rounded-lg">Search</button>
             </form>
             {foodData ? (
-                <div className="recipe-list-container">
+                <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-12 mx-12">
                     {recipeElements}
                 </div>
-            ) : <h1>No data currently...</h1>}
+            ) : <h1 className="bg-yellow-100 text-center text-2xl">No data currently...</h1>}
         </div>
     )
 }

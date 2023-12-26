@@ -23,15 +23,15 @@ export default function RecipeDetail() {
 
     const foodElements = food?.map(item => {
         return (
-            <div key={item.idMeal} className="detail-container">
-                <h1 className="detail-name">{item.strMeal}</h1>
-                <img className="detail-image" src={item.strMealThumb} alt="Food item" />
-                {item.strYoutube ? <Link className="youtube-link" to={item.strYoutube}>
+            <div key={item.idMeal} className="">
+                <h1 className="">{item.strMeal}</h1>
+                <img className="" src={item.strMealThumb} alt="Food item" />
+                {item.strYoutube ? <Link className="" to={item.strYoutube}>
                     Recipe YouTube Video
                 </Link>
                     : ""}
-                <h2 className="ingredients-heading">Ingredients:</h2>
-                <div className="ingredients-list">
+                <h2 className="">Ingredients:</h2>
+                <div className="">
                     <p>{item.strMeasure1} {item.strIngredient1}</p>
                     <p>{item.strMeasure2} {item.strIngredient2}</p>
                     <p>{item.strMeasure3} {item.strIngredient3}</p>
@@ -52,8 +52,8 @@ export default function RecipeDetail() {
                     <p>{item.strMeasure19} {item.strIngredient19}</p>
                     <p>{item.strMeasure20} {item.strIngredient20}</p>
                 </div>
-                <h1 className="instructions-heading">Instructions:</h1>
-                <p className="recipe-instructions">{item.strInstructions}</p>
+                <h1 className="">Instructions:</h1>
+                <p className="">{item.strInstructions}</p>
             </div>
         )
     })
@@ -61,10 +61,10 @@ export default function RecipeDetail() {
     return (
         <>
             {food ? (
-                <div className="detail-container">
+                <div className="">
                     {foodElements}
                 </div>
-            ) : <h1 className="detail-name">Loading...</h1>}
+            ) : <h1 className="">Loading...</h1>}
         </>
     )
 }

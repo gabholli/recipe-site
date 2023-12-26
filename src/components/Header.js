@@ -5,22 +5,22 @@ export default function Header() {
 
 
     return (
-        <header>
+        <header className="h-32 bg-yellow-200 text-5xl text-center text-gray-600">
 
             <nav>
                 <NavLink
-                    className="link"
+                    className=""
                     to="/">Home
                 </NavLink>
                 <NavLink
                     to="/recipes"
-                    className="link"
+                    className=""
                 >
                     Recipes
                 </NavLink>
                 <NavLink
                     to="/random"
-                    className="link"
+                    className=""
                 >
                     Random Meal
                 </NavLink>

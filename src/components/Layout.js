@@ -5,7 +5,7 @@ import Footer from "./Footer"
 
 export default function Layout() {
     return (
-        <div className="all-content-container">
+        <div className="font-hedvig">
             <Header />
             <Outlet />
             <Footer />

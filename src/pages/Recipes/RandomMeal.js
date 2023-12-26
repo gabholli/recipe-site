@@ -23,17 +23,17 @@ export default function RandomMeal() {
     return (
         <>
             {random ? (
-                <div className="detail-container">
-                    <h1 className="detail-name">{random.strMeal}</h1>
-                    <img className="detail-image" src={random.strMealThumb} alt="Random food" />
+                <div className="">
+                    <h1 className="">{random.strMeal}</h1>
+                    <img className="" src={random.strMealThumb} alt="Random food" />
                     {
-                        random.strYoutube ? <Link className="youtube-link" to={random.strYoutube}>
+                        random.strYoutube ? <Link className="" to={random.strYoutube}>
                             Recipe YouTube Video
                         </Link>
                             : ""
                     }
-                    <h2 className="ingredients-heading">Ingredients:</h2>
-                    <div className="ingredients-list">
+                    <h2 className="">Ingredients:</h2>
+                    <div className="">
                         <p>{random.strMeasure1} {random.strIngredient1}</p>
                         <p>{random.strMeasure2} {random.strIngredient2}</p>
                         <p>{random.strMeasure3} {random.strIngredient3}</p>
@@ -53,10 +53,10 @@ export default function RandomMeal() {
                         <p>{random.strMeasure19} {random.strIngredient19}</p>
                         <p>{random.strMeasure20} {random.strIngredient20}</p>
                     </div>
-                    <h1 className="instructions-heading">Instructions:</h1>
-                    <p className="recipe-instructions">{random.strInstructions}</p>
+                    <h1 className="">Instructions:</h1>
+                    <p className="">{random.strInstructions}</p>
                 </div >
-            ) : <h1 className="detail-name">Loading...</h1>
+            ) : <h1 className="">Loading...</h1>
             }
         </>
     )

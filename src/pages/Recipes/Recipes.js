@@ -51,7 +51,7 @@ export default function Recipes() {
                 <img className="rounded"
                     src={meal.strMealThumb}
                     alt="" />
-                <h1 className="mt-12 text-3xl">{meal.strMeal}</h1>
+                <h1 className="mt-12 text-3xl hover:underline">{meal.strMeal}</h1>
             </Link>
         </div>
     ))

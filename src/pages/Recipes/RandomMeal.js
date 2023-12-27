@@ -23,17 +23,18 @@ export default function RandomMeal() {
     return (
         <>
             {random ? (
-                <div className="text-center bg-green-100">
+                <div className="text-center bg-green-100 flex flex-1 flex-col
+                    items-center justify-center gap-10 px-6 py-8">
                     <h1 className="text-5xl">{random.strMeal}</h1>
-                    <img className="rounded" src={random.strMealThumb} alt="Random food" />
+                    <img className="rounded" src={random.strMealThumb} alt=" Random food" />
                     {
-                        random.strYoutube ? <Link className="underline text-4xl" to={random.strYoutube}>
+                        random.strYoutube ? <Link className="underline text-4xl text-blue-900" to={random.strYoutube}>
                             Recipe YouTube Video
                         </Link>
                             : ""
                     }
                     <h2 className="text-3xl">Ingredients:</h2>
-                    <div className="text-xl">
+                    <div className="text-xl leading-relaxed">
                         <p>{random.strMeasure1} {random.strIngredient1}</p>
                         <p>{random.strMeasure2} {random.strIngredient2}</p>
                         <p>{random.strMeasure3} {random.strIngredient3}</p>
@@ -54,9 +55,9 @@ export default function RandomMeal() {
                         <p>{random.strMeasure20} {random.strIngredient20}</p>
                     </div>
                     <h1 className="text-3xl">Instructions:</h1>
-                    <p className="text-xl text-left">{random.strInstructions}</p>
+                    <p className="text-xl text-left leading-relaxed">{random.strInstructions}</p>
                 </div >
-            ) : <h1 className="text-center text-2xl bg-green-100">Loading...</h1>
+            ) : <h1 className="text-center text-2xl bg-green-100 flex-1 pt-20">Loading...</h1>
             }
         </>
     )

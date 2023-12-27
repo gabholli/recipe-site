@@ -58,17 +58,18 @@ export default function Recipes() {
 
 
     return (
-        <div className="bg-green-100 py-12">
-            <form className="text-center" onSubmit={handleSubmit}>
-                <input className="border-2 border-gray-500 rounded-lg"
+        <div className="bg-green-100 py-12 flex flex-1 flex-col items-center">
+            <form className="text-center mb-12 flex flex-col sm:flex-row sm:items-center 
+            justify-center gap-4" onSubmit={handleSubmit}>
+                <input className="border-2 border-gray-500 rounded-lg indent-3 h-10 w-64"
                     type="text"
-                    placeholder="Enter dish name"
+                    placeholder="Enter dish or ingredient name"
                     onChange={handleChange}
                     name="foodItem"
                     value={foodItemFromLocalStorage || ""}
                 >
                 </input>
-                <button className="border-2 border-gray-500 rounded-lg">Search</button>
+                <button className="bg-green-200 border-2 border-gray-500 rounded-lg h-10 px-4 py-2">Search</button>
             </form>
             {foodData ? (
                 <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-12 mx-12">

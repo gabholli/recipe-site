@@ -5,9 +5,9 @@ export default function Header() {
 
 
     return (
-        <header className="h-20 bg-green-200 text-2xl sm:text-4xl  text-center flex justify-center items-center">
+        <header className="h-20 bg-green-200 text-2xl sm:text-4xl text-center flex justify-center items-center">
 
-            <nav className="text-2xl sm:text-4xl flex justify-center gap-8">
+            <nav className="text-2xl sm:text-4xl flex justify-center items-center gap-6 m-4">
                 <NavLink
                     to="/">Home
                 </NavLink>

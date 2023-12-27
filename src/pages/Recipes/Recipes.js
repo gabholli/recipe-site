@@ -41,7 +41,7 @@ export default function Recipes() {
     const recipeElements = foodData?.map(meal => (
         <div key={meal.idMeal} className="">
             <Link
-                className="text-center text-2xl"
+                className="text-center"
                 to={meal.idMeal}
             // state={{
             //     search: `?${searchParams.toString()}`,
@@ -51,7 +51,7 @@ export default function Recipes() {
                 <img className="rounded"
                     src={meal.strMealThumb}
                     alt="" />
-                <h1 className="mt-12">{meal.strMeal}</h1>
+                <h1 className="mt-12 text-3xl">{meal.strMeal}</h1>
             </Link>
         </div>
     ))

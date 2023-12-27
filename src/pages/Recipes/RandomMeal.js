@@ -28,7 +28,7 @@ export default function RandomMeal() {
                     <h1 className="text-5xl">{random.strMeal}</h1>
                     <img className="rounded sm:w-1/3" src={random.strMealThumb} alt=" Random food" />
                     {
-                        random.strYoutube ? <Link className="underline text-4xl text-blue-900" to={random.strYoutube}>
+                        random.strYoutube ? <Link className="hover:underline text-4xl text-blue-900" to={random.strYoutube}>
                             Recipe YouTube Video
                         </Link>
                             : ""

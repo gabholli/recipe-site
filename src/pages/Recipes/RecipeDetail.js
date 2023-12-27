@@ -26,7 +26,7 @@ export default function RecipeDetail() {
             <div key={item.idMeal} className="text-center flex flex-1 flex-col
             items-center justify-center gap-10 px-6 py-8">
                 <h1 className="text-5xl">{item.strMeal}</h1>
-                <img className="rounded w-1/3" src={item.strMealThumb} alt="Food item" />
+                <img className="rounded sm:w-1/3" src={item.strMealThumb} alt="Food item" />
                 {item.strYoutube ? <Link className="underline text-4xl text-blue-900" to={item.strYoutube}>
                     Recipe YouTube Video
                 </Link>

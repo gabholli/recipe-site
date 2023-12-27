@@ -25,7 +25,7 @@ export default function RecipeDetail() {
         return (
             <div key={item.idMeal} className="text-center">
                 <h1 className="text-5xl">{item.strMeal}</h1>
-                <img className="" src={item.strMealThumb} alt="Food item" />
+                <img className="rounded" src={item.strMealThumb} alt="Food item" />
                 {item.strYoutube ? <Link className="underline text-4xl" to={item.strYoutube}>
                     Recipe YouTube Video
                 </Link>
@@ -61,10 +61,10 @@ export default function RecipeDetail() {
     return (
         <>
             {food ? (
-                <div className="bg-yellow-100">
+                <div className="bg-green-100">
                     {foodElements}
                 </div>
-            ) : <h1 className="bg-yellow-100 text-center text-2xl">Loading...</h1>}
+            ) : <h1 className="bg-green-100 text-center text-2xl">Loading...</h1>}
         </>
     )
 }

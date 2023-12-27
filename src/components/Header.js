@@ -5,7 +5,7 @@ export default function Header() {
 
 
     return (
-        <header className="bg-yellow-200  text-center">
+        <header className="bg-green-200 text-center">
 
             <nav className="text-2xl sm:text-4xl">
                 <NavLink

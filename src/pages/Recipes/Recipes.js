@@ -58,7 +58,7 @@ export default function Recipes() {
 
 
     return (
-        <div className="bg-yellow-100 py-12">
+        <div className="bg-green-100 py-12">
             <form className="text-center" onSubmit={handleSubmit}>
                 <input className="border-2 border-gray-500 rounded-lg"
                     type="text"
@@ -74,7 +74,7 @@ export default function Recipes() {
                 <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-12 mx-12">
                     {recipeElements}
                 </div>
-            ) : <h1 className="bg-yellow-100 text-center text-2xl">No data currently...</h1>}
+            ) : <h1 className="bg-green-100 text-center text-2xl">No data currently...</h1>}
         </div>
     )
 }

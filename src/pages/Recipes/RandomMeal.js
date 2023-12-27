@@ -23,9 +23,9 @@ export default function RandomMeal() {
     return (
         <>
             {random ? (
-                <div className="text-center bg-yellow-100">
+                <div className="text-center bg-green-100">
                     <h1 className="text-5xl">{random.strMeal}</h1>
-                    <img className="" src={random.strMealThumb} alt="Random food" />
+                    <img className="rounded" src={random.strMealThumb} alt="Random food" />
                     {
                         random.strYoutube ? <Link className="underline text-4xl" to={random.strYoutube}>
                             Recipe YouTube Video
@@ -56,7 +56,7 @@ export default function RandomMeal() {
                     <h1 className="text-3xl">Instructions:</h1>
                     <p className="text-xl text-left">{random.strInstructions}</p>
                 </div >
-            ) : <h1 className="text-center bg-yellow-100">Loading...</h1>
+            ) : <h1 className="text-center text-2xl bg-green-100">Loading...</h1>
             }
         </>
     )

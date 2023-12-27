@@ -23,15 +23,16 @@ export default function RecipeDetail() {
 
     const foodElements = food?.map(item => {
         return (
-            <div key={item.idMeal} className="detail-container">
-                <h1 className="detail-name">{item.strMeal}</h1>
-                <img className="detail-image" src={item.strMealThumb} alt="Food item" />
-                {item.strYoutube ? <Link className="youtube-link" to={item.strYoutube}>
+            <div key={item.idMeal} className="text-center flex flex-1 flex-col
+            items-center justify-center gap-10 px-6 py-8">
+                <h1 className="text-5xl">{item.strMeal}</h1>
+                <img className="rounded sm:w-1/3" src={item.strMealThumb} alt="Food item" />
+                {item.strYoutube ? <Link className="hover:underline text-4xl text-blue-900" to={item.strYoutube}>
                     Recipe YouTube Video
                 </Link>
                     : ""}
-                <h2 className="ingredients-heading">Ingredients:</h2>
-                <div className="ingredients-list">
+                <h2 className="text-3xl">Ingredients:</h2>
+                <div className="text-xl leading-relaxed">
                     <p>{item.strMeasure1} {item.strIngredient1}</p>
                     <p>{item.strMeasure2} {item.strIngredient2}</p>
                     <p>{item.strMeasure3} {item.strIngredient3}</p>
@@ -52,8 +53,8 @@ export default function RecipeDetail() {
                     <p>{item.strMeasure19} {item.strIngredient19}</p>
                     <p>{item.strMeasure20} {item.strIngredient20}</p>
                 </div>
-                <h1 className="instructions-heading">Instructions:</h1>
-                <p className="recipe-instructions">{item.strInstructions}</p>
+                <h1 className="text-3xl">Instructions:</h1>
+                <p className="text-xl text-left leading-relaxed">{item.strInstructions}</p>
             </div>
         )
     })
@@ -61,10 +62,10 @@ export default function RecipeDetail() {
     return (
         <>
             {food ? (
-                <div className="detail-container">
+                <div className="bg-green-100">
                     {foodElements}
                 </div>
-            ) : <h1 className="detail-name">Loading...</h1>}
+            ) : <h1 className="bg-green-100 text-center text-2xl flex-1 pt-20">Loading...</h1>}
         </>
     )
 }

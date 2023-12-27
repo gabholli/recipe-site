@@ -5,22 +5,23 @@ export default function Header() {
 
 
     return (
-        <header>
+        <header className="h-20 bg-gradient-to-b from-green-200 to-green-300 text-2xl 
+            sm:text-4xl text-center flex justify-center items-center">
 
-            <nav>
+            <nav className="text-base sm:text-4xl flex justify-center items-center gap-6 m-4">
                 <NavLink
-                    className="link"
+                    className="hover:underline"
                     to="/">Home
                 </NavLink>
                 <NavLink
                     to="/recipes"
-                    className="link"
+                    className="hover:underline"
                 >
                     Recipes
                 </NavLink>
                 <NavLink
                     to="/random"
-                    className="link"
+                    className="hover:underline"
                 >
                     Random Meal
                 </NavLink>

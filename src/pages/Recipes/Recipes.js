@@ -39,41 +39,45 @@ export default function Recipes() {
     }, [search])
 
     const recipeElements = foodData?.map(meal => (
-        <div key={meal.idMeal} className="food-tile">
+        <div key={meal.idMeal} className="">
             <Link
-                className="link"
+                className="text-center"
                 to={meal.idMeal}
             // state={{
             //     search: `?${searchParams.toString()}`,
             //     type: typeFilter
             // }}
             >
-                <img className="food-image"
+                <img className="rounded"
                     src={meal.strMealThumb}
-                    alt="Food item" />
-                <h1 className="food-name">{meal.strMeal}</h1>
+                    alt="" />
+                <h1 className="mt-12 text-3xl hover:underline">{meal.strMeal}</h1>
             </Link>
         </div>
     ))
 
 
     return (
-        <div className="recipe-list-wrapper">
-            <form onSubmit={handleSubmit}>
-                <input type="text"
-                    placeholder="Enter dish name"
+        <div className="bg-green-100 py-12 flex flex-1 flex-col items-center">
+            <form className="text-center mb-12 flex flex-col sm:flex-row sm:items-center 
+            justify-center gap-4" onSubmit={handleSubmit}>
+                <input className="bg-gradient-to-b from-green-200 to-green-300
+                border-2 border-gray-500 rounded-lg indent-3 h-10 w-64"
+                    type="text"
+                    placeholder="Enter dish or ingredient name"
                     onChange={handleChange}
                     name="foodItem"
                     value={foodItemFromLocalStorage || ""}
                 >
                 </input>
-                <button>Search</button>
+                <button className="bg-gradient-to-b from-green-200 to-green-300
+                    border-2 border-gray-500 rounded-lg h-10 px-4 py-2">Search</button>
             </form>
             {foodData ? (
-                <div className="recipe-list-container">
+                <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-12 mx-12">
                     {recipeElements}
                 </div>
-            ) : <h1>No data currently...</h1>}
+            ) : <h1 className="bg-green-100 text-center text-2xl">No data currently...</h1>}
         </div>
     )
 }

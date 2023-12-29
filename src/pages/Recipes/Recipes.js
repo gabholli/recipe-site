@@ -8,6 +8,7 @@ export default function Recipes() {
     const [search, setSearch] = useState({
         foodItem: foodItemFromLocalStorage
     })
+    const [loading, setLoading] = useState(false)
 
     function handleSubmit(event) {
         event.preventDefault()
@@ -22,6 +23,7 @@ export default function Recipes() {
 
     useEffect(() => {
         if (search.length > 0) {
+            setLoading(true)
             fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
                 .then(response => {
                     if (!response.ok) {
@@ -32,6 +34,7 @@ export default function Recipes() {
                 .then(data => {
                     console.log(data)
                     setFoodData(data.meals)
+                    setLoading(false)
                 })
                 .catch(error =>
                     console.log("Fetch error: ", error))
@@ -56,6 +59,9 @@ export default function Recipes() {
         </div>
     ))
 
+    if (loading) {
+        return <h1 className="bg-green-100 text-center text-2xl flex-1 pt-20">Loading...</h1>
+    }
 
     return (
         <div className="bg-green-100 py-12 flex flex-1 flex-col items-center">

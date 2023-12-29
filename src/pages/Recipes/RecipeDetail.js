@@ -5,8 +5,10 @@ import { Link, useParams } from "react-router-dom"
 export default function RecipeDetail() {
     const params = useParams()
     const [food, setFood] = useState(null)
+    const [loading, setLoading] = useState(false)
 
     useEffect(() => {
+        setLoading(true)
         fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${params.id}`)
             .then(response => {
                 if (!response.ok) {
@@ -16,6 +18,7 @@ export default function RecipeDetail() {
             })
             .then(data => {
                 setFood(data.meals)
+                setLoading(false)
             })
             .catch(error =>
                 console.log("Fetch error: ", error))
@@ -59,13 +62,17 @@ export default function RecipeDetail() {
         )
     })
 
+    if (loading) {
+        return <h1 className="bg-green-100 text-center text-2xl flex-1 pt-20">Loading...</h1>
+    }
+
     return (
         <>
-            {food ? (
-                <div className="bg-green-100">
-                    {foodElements}
-                </div>
-            ) : <h1 className="bg-green-100 text-center text-2xl flex-1 pt-20">Loading...</h1>}
+
+            <div className="bg-green-100">
+                {foodElements}
+            </div>
+
         </>
     )
 }

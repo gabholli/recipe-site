@@ -34,7 +34,7 @@ export default function RandomMeal() {
                             : ""
                     }
                     <h2 className="text-3xl">Ingredients:</h2>
-                    <div className="text-xl leading-relaxed md:grid grid-cols-3 gap-6">
+                    <div className="text-xl leading-relaxed">
                         <p>{random.strMeasure1} {random.strIngredient1}</p>
                         <p>{random.strMeasure2} {random.strIngredient2}</p>
                         <p>{random.strMeasure3} {random.strIngredient3}</p>

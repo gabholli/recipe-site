@@ -30,7 +30,8 @@ export default function RecipeDetail() {
             items-center justify-center gap-10 px-6 py-8">
                 <h1 className="text-5xl">{item.strMeal}</h1>
                 <img className="rounded sm:w-1/3" src={item.strMealThumb} alt="Food item" />
-                {item.strYoutube ? <Link className="underline lg:no-underline sm:hover:underline text-4xl text-blue-900" to={item.strYoutube}>
+                {item.strYoutube ? <Link className="underline text-4xl" to={item.strYoutube}
+                    target="_blank" rel="noopener noreferrer">
                     Recipe YouTube Video
                 </Link>
                     : ""}
@@ -63,13 +64,13 @@ export default function RecipeDetail() {
     })
 
     if (loading) {
-        return <h1 className="bg-green-100 text-center text-2xl flex-1 pt-20">Loading...</h1>
+        return <h1 className="text-center text-2xl flex-1 pt-20">Loading...</h1>
     }
 
     return (
         <>
 
-            <div className="bg-green-100">
+            <div className="">
                 {foodElements}
             </div>
 

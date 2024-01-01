@@ -64,7 +64,7 @@ export default function Recipes() {
     }
 
     return (
-        <div className="bg-green-100 py-12 flex flex-1 flex-col items-center">
+        <div className=" py-12 flex flex-1 flex-col items-center">
             <form className="text-center mb-12 flex flex-col sm:flex-row sm:items-center 
             justify-center gap-4" onSubmit={handleSubmit}>
                 <input className="border-2 border-gray-500 rounded-lg indent-3 h-10 w-64"

@@ -60,14 +60,14 @@ export default function Recipes() {
     ))
 
     if (loading) {
-        return <h1 className="bg-green-100 text-center text-2xl flex-1 pt-20">Loading...</h1>
+        return <h1 className="text-center text-2xl flex-1 pt-20">Loading...</h1>
     }
 
     return (
-        <div className="bg-green-100 py-12 flex flex-1 flex-col items-center">
+        <div className="py-12 flex flex-1 flex-col items-center">
             <form className="text-center mb-12 flex flex-col sm:flex-row sm:items-center 
             justify-center gap-4" onSubmit={handleSubmit}>
-                <input className="border-2 border-gray-500 rounded-lg indent-3 h-10 w-64"
+                <input className="bg-white text-black border-2 rounded-lg indent-3 h-10 w-64"
                     type="text"
                     placeholder="Enter dish or ingredient name"
                     onChange={handleChange}
@@ -75,8 +75,8 @@ export default function Recipes() {
                     value={foodItemFromLocalStorage || ""}
                 >
                 </input>
-                <button className="bg-green-200
-                    border-2 border-gray-500 rounded-lg h-10 px-4 py-2 hover:bg-green-300 active:bg-green-400"
+                <button className="bg-white text-black border-2 rounded-lg h-10 px-4 py-2
+                    hover:bg-gray-300 active:bg-gray-400"
                 >Search
                 </button>
             </form>
@@ -84,7 +84,7 @@ export default function Recipes() {
                 <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-12 mx-12">
                     {recipeElements}
                 </div>
-            ) : <h1 className="bg-green-100 text-center text-2xl">No data currently...</h1>}
+            ) : <h1 className="text-center text-2xl">No data currently...</h1>}
         </div>
     )
 }

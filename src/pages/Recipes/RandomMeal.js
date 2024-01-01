@@ -24,17 +24,20 @@ export default function RandomMeal() {
     }, [])
 
     if (loading) {
-        return <h1 className="bg-green-100 text-center text-2xl flex-1 pt-20">Loading...</h1>
+        return <h1 className="text-center text-2xl flex-1 pt-20">Loading...</h1>
     }
 
     return (
         <> {random &&
-            <div className="text-center bg-green-100 flex flex-1 flex-col
+            <div className="text-center flex flex-1 flex-col
                     items-center justify-center gap-10 px-6 py-8">
                 <h1 className="text-5xl">{random.strMeal}</h1>
                 <img className="rounded sm:w-1/3" src={random.strMealThumb} alt=" Random food" />
                 {
-                    random.strYoutube ? <Link className="underline lg:no-underline hover:underline text-4xl text-blue-900" to={random.strYoutube}>
+                    random.strYoutube ? <Link className="underline text-4xl"
+                        to={random.strYoutube}
+                        target="_blank"
+                        rel="noopener noreferrer">
                         Recipe YouTube Video
                     </Link>
                         : ""

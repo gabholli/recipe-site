@@ -60,7 +60,11 @@ export default function Recipes() {
     ))
 
     if (loading) {
-        return <h1 className="text-center text-2xl flex-1 pt-20">Loading...</h1>
+        return (
+            <div className="flex justify-center items-center flex-1">
+                <h1 className="text-center text-2xl pt-20">Loading...</h1>
+            </div>
+        )
     }
 
     return (

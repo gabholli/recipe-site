@@ -68,7 +68,7 @@ export default function RandomMeal() {
                     <p>{random.strMeasure20} {random.strIngredient20}</p>
                 </div>
                 <h1 className="text-3xl">Instructions:</h1>
-                <p className="text-xl text-left leading-relaxed">{random.strInstructions}</p>
+                <p className="text-xl text-left leading-10 indent-14">{random.strInstructions}</p>
             </div>
         }
         </>

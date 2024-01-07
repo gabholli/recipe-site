@@ -58,7 +58,7 @@ export default function RecipeDetail() {
                     <p>{item.strMeasure20} {item.strIngredient20}</p>
                 </div>
                 <h1 className="text-3xl">Instructions:</h1>
-                <p className="text-xl text-left leading-relaxed">{item.strInstructions}</p>
+                <p className="text-xl text-left leading-10 indent-14">{item.strInstructions}</p>
             </div>
         )
     })

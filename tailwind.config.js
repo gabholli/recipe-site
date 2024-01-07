@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'background-image': "url('../assets/dark-menu.jpg')"
+      },
       fontFamily: {
         hedvig: ["Hedvig", "serif"]
       },

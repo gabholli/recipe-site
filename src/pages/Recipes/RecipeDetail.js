@@ -36,7 +36,7 @@ export default function RecipeDetail() {
                 </Link>
                     : ""}
                 <h2 className="text-3xl">Ingredients:</h2>
-                <div className="text-xl leading-relaxed md:grid grid-cols-3 gap-6">
+                <div className="text-xl leading-10">
                     <p>{item.strMeasure1} {item.strIngredient1}</p>
                     <p>{item.strMeasure2} {item.strIngredient2}</p>
                     <p>{item.strMeasure3} {item.strIngredient3}</p>

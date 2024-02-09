@@ -6,7 +6,7 @@ import Footer from "./Footer"
 export default function Layout() {
     return (
         <div className="bg-black font-hedvig text-white
-            flex flex-col min-h-svh">
+            flex flex-col min-h-screen">
             <Header />
             <Outlet />
             <Footer />

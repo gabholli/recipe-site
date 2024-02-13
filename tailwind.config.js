@@ -11,6 +11,9 @@ module.exports = {
       fontFamily: {
         hedvig: ["Hedvig", "serif"]
       },
+      minHeight: {
+        screen: ["100vh", "100svh"]
+      }
     },
     screens: {
       'sm': '640px',

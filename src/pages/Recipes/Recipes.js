@@ -83,7 +83,7 @@ export default function Recipes() {
                 >
                 </input>
                 <button className="bg-white text-black border-2 rounded-lg h-10 px-4 py-2
-                    hover:bg-neutral-300 active:bg-neutral-400 flex items-center justify-center"
+                    hover:bg-zinc-500 active:bg-neutral-600 flex items-center justify-center"
                 >Search
                 </button>
             </form>

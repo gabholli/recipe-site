@@ -5,7 +5,7 @@ export default function Header() {
 
 
     return (
-        <header className="h-20 bg-zinc-500 bg-opacity-50 text-2xl 
+        <header className="h-20 bg-black bg-opacity-50 text-2xl 
             sm:text-4xl text-center flex justify-center items-center">
 
             <nav className="text-base sm:text-4xl flex justify-center items-center gap-6 m-4">

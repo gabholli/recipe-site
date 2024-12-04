@@ -1,8 +1,3 @@
-# Recipe Site
-
-
-To access, go to https://gabholli-recipe-site.netlify.app
-
 # Project Title
 Food Recipe Site
 

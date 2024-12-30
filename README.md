@@ -2,7 +2,7 @@
 Food Recipe Site
 
 ## Description
-This repository contains files for a recipe site created using React and React Router along with Tailwind CSS.
+This repository contains files for a recipe site created using React and React Router 7 along with Tailwind CSS.
 
 ## Getting Started
 ### Dependencies

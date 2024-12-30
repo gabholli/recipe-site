@@ -1,6 +1,6 @@
 import React from "react"
 import { useState, useEffect } from "react"
-import { Link, useParams } from "react-router-dom"
+import { Link, useParams } from "react-router"
 
 export default function RecipeDetail() {
     const params = useParams()

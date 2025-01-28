@@ -28,8 +28,8 @@ export default function Home() {
         // }}
         >
             <div className="bg-neutral-600 flex flex-col gap-y-4 p-4 rounded-xl">
-                <h1 className="text-center text-3xl sm:text-4xl font-bold">All the recipes you need</h1>
-                <p className="text-xl sm:text-3xl text-center">You should find the recipe you want</p>
+                <h1 className="text-center text-3xl sm:text-4xl font-bold">Recipe Repository</h1>
+                <p className="text-xl sm:text-3xl text-center">Click here to look for recipes</p>
             </div>
         </div>
     )

@@ -31,6 +31,12 @@ export default function Header() {
                 >
                     Favorites
                 </NavLink>
+                <NavLink
+                    to="/login"
+                    className="hover:underline"
+                >
+                    Log In
+                </NavLink>
             </nav>
 
         </header>

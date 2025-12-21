@@ -32,7 +32,7 @@ export default function Signup() {
 
     return (
         <div>
-            <form onSubmit={handleSignIn} className="max-w-md m-auto pt-24">
+            <form onSubmit={handleSignIn} className="max-w-md m-auto p-4 md:p-20">
                 <h2 className="font-bold pb-2">Sign up today!</h2>
                 <p>
                     Already have an account? <Link className="text-blue-500" to="/login">Sign in</Link>

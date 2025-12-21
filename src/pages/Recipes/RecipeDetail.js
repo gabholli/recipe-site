@@ -1,6 +1,7 @@
 import React from "react"
 import { useState, useEffect } from "react"
 import { Link, useParams } from "react-router"
+import FavoritesIcon from "../../components/FavoritesIcon"
 
 export default function RecipeDetail() {
     const params = useParams()
@@ -28,7 +29,10 @@ export default function RecipeDetail() {
         return (
             <div key={item.idMeal} className="text-center flex flex-1 flex-col
             items-center justify-center gap-10 px-6 py-8">
-                <h1 className="text-5xl">{item.strMeal}</h1>
+                <div className="flex gap-x-12">
+                    <h1 className="text-5xl">{item.strMeal}</h1>
+                    <FavoritesIcon />
+                </div>
                 <img className="rounded sm:w-1/3" src={item.strMealThumb} alt="Food item" />
                 {item.strYoutube ? <Link className="underline text-4xl" to={item.strYoutube}
                     target="_blank" rel="noopener noreferrer">

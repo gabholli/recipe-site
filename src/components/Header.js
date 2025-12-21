@@ -32,10 +32,10 @@ export default function Header() {
                     Favorites
                 </NavLink>
                 <NavLink
-                    to="/login"
+                    to="/signup"
                     className="hover:underline"
                 >
-                    Log In
+                    Sign Up
                 </NavLink>
             </nav>
 

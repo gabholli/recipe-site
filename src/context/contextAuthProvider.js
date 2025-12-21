@@ -24,3 +24,7 @@ export default function AuthContextProvider({ children }) {
         </AuthContext.Provider>
     )
 }
+
+export function UserAuth() {
+    return useContext(AuthContext)
+}

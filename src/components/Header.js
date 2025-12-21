@@ -25,6 +25,12 @@ export default function Header() {
                 >
                     Random Meal
                 </NavLink>
+                <NavLink
+                    to="/favorites"
+                    className="hover:underline"
+                >
+                    Favorites
+                </NavLink>
             </nav>
 
         </header>

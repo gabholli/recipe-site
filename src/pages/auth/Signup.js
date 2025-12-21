@@ -35,13 +35,13 @@ export default function Signup() {
             <form onSubmit={handleSignIn} className="max-w-md m-auto pt-24">
                 <h2 className="font-bold pb-2">Sign up today!</h2>
                 <p>
-                    Already have an account? <Link to="/login">Sign in</Link>
+                    Already have an account? <Link className="text-blue-500" to="/login">Sign in</Link>
                 </p>
                 <div className="flex flex-col py-4">
                     {/* <label htmlFor="Email">Email</label> */}
                     <input
                         onChange={(e) => setEmail(e.target.value)}
-                        className="p-3 mt-2"
+                        className="p-3 mt-2 text-black"
                         type="email"
                         name="email"
                         id="email"
@@ -52,7 +52,7 @@ export default function Signup() {
                     {/* <label htmlFor="Password">Password</label> */}
                     <input
                         onChange={(e) => setPassword(e.target.value)}
-                        className="p-3 mt-2"
+                        className="p-3 mt-2 text-black"
                         type="password"
                         name="password"
                         id="password"

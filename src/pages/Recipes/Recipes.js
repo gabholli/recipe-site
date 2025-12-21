@@ -1,6 +1,7 @@
 import React from "react"
 import { useState, useEffect } from "react"
 import { Link } from "react-router"
+import FavoritesIcon from "../../components/FavoritesIcon"
 
 export default function Recipes() {
     const foodItemFromLocalStorage = JSON.parse(localStorage.getItem("foodItem"))
@@ -54,8 +55,12 @@ export default function Recipes() {
                 <img className="rounded"
                     src={meal.strMealThumb}
                     alt="" />
-                <h1 className="mt-12 text-3xl hover:underline">{meal.strMeal}</h1>
             </Link>
+            <div className="flex justify-between items-center mt-12 px-4">
+                <h1 className="text-3xl">{meal.strMeal}</h1>
+                <FavoritesIcon />
+            </div>
+
         </div>
     ))
 

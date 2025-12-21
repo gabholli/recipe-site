@@ -4,15 +4,19 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import toast, { Toaster } from 'react-hot-toast';
+import AuthContextProvider from "./context/AuthContext"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <App />
-    <Toaster
-      position="bottom-left"
-      reverseOrder={false}
-    />
+    <AuthContextProvider>
+      <App />
+      <Toaster
+        position="bottom-left"
+        reverseOrder={false}
+      />
+    </AuthContextProvider>
+
   </>
 );
 

@@ -1,13 +1,23 @@
 import { createContext, useEffect, useState, useContext } from "react";
-import { supabase } from "../database/supbaseClient"
+import { supabase } from "../database/supabaseClient"
 
 const AuthContext = createContext()
 
 export default function AuthContextProvider({ children }) {
     const [session, setSession] = useState(undefined)
 
-    function signUpNewUser() {
+    async function signUpNewUser(email, password) {
+        const { data, error } = await supabase.auth.signUp({
+            email: email,
+            password: password,
+        })
 
+        if (error) {
+            console.error("Error signing up: ", error)
+            return { success: false, error }
+        }
+
+        return { success: true, data }
     }
 
     function signIn() {

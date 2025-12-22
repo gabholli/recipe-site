@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaRegStar } from "react-icons/fa"
 import { useState } from 'react'
-import toast, { Toaster } from 'react-hot-toast'
+import toast from 'react-hot-toast'
 import { UserAuth } from '../context/AuthContext'
 
 export default function FavoritesIcon() {
@@ -12,15 +12,17 @@ export default function FavoritesIcon() {
         setIsFavorite(!isFavorite)
     }
 
-    function authMessage() {
-        if (!isFavorite && !authenticated) {
-            toast("Stored temporarily in favorites - Log in to store favorites permanently")
+    function favoriteMessage() {
+        if (!isFavorite) {
+            toast("Recipe added to favorites!")
+        } else {
+            toast("Recipe removed from favorites")
         }
     }
 
     function handleClick() {
         updateFavoriteStatus()
-        authMessage()
+        favoriteMessage()
     }
 
     return (

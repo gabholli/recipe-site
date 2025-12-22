@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router'
 import { UserAuth } from '../../context/AuthContext'
+import toast from 'react-hot-toast'
 
 export default function Signup() {
     const [email, setEmail] = useState("")
@@ -19,6 +20,7 @@ export default function Signup() {
             const result = await signUpNewUser(email, password)
 
             if (result.success) {
+                toast("User account created!")
                 navigate("/")
             } else {
                 setError(result.error.message)

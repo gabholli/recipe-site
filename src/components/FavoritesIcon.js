@@ -13,7 +13,7 @@ export default function FavoritesIcon() {
     }
 
     function authMessage() {
-        if (!isFavorite) {
+        if (!isFavorite && !authenticated) {
             toast("Stored temporarily in favorites - Log in to store favorites permanently")
         }
     }

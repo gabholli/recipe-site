@@ -56,7 +56,7 @@ export default function Recipes() {
                     src={meal.strMealThumb}
                     alt="" />
             </Link>
-            <div className="flex justify-between items-center mt-12 px-4">
+            <div className="flex justify-center text-center items-center mt-12 px-4 gap-x-24">
                 <h1 className="text-3xl">{meal.strMeal}</h1>
                 <FavoritesIcon />
             </div>

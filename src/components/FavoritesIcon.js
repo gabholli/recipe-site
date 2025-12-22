@@ -2,10 +2,11 @@ import React from 'react'
 import { FaRegStar } from "react-icons/fa"
 import { useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast'
+import { UserAuth } from '../context/AuthContext'
 
 export default function FavoritesIcon() {
     const [isFavorite, setIsFavorite] = useState(false)
-    const authenticated = true
+    const { authenticated } = UserAuth()
 
     function updateFavoriteStatus() {
         setIsFavorite(!isFavorite)
@@ -23,6 +24,10 @@ export default function FavoritesIcon() {
     }
 
     return (
-        <button onClick={handleClick}><FaRegStar color={isFavorite ? "yellow" : "White"} /> </button>
+        <>
+            {authenticated &&
+                <button onClick={handleClick}><FaRegStar color={isFavorite ? "yellow" : "White"} /> </button>
+            }
+        </>
     )
 }

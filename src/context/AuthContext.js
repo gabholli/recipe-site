@@ -5,6 +5,7 @@ const AuthContext = createContext()
 
 export default function AuthContextProvider({ children }) {
     const [session, setSession] = useState(undefined)
+    const authenticated = false
 
     async function signUpNewUser(email, password) {
         const { data, error } = await supabase.auth.signUp({
@@ -29,7 +30,7 @@ export default function AuthContextProvider({ children }) {
     }
 
     return (
-        <AuthContext.Provider value={{ session, signUpNewUser, signIn, signOut }}>
+        <AuthContext.Provider value={{ session, authenticated, signUpNewUser, signIn, signOut }}>
             {children}
         </AuthContext.Provider>
     )

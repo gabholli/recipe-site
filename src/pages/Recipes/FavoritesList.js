@@ -2,13 +2,16 @@ import React from 'react'
 import { UserAuth } from '../../context/AuthContext'
 
 export default function FavoritesList() {
-    const { authenticated } = UserAuth()
+    const { session } = UserAuth()
 
     return (
         <>
-            {authenticated ? (
+            {session ? (
                 <div>FavoritesList</div>
-            ) : <p>Log in to store your favorite recipes!</p>
+            ) :
+                <div className='flex justify-center items-center text-3xl flex-col'>
+                    <p>Log in to store your favorite recipes!</p>
+                </div>
             }
         </>
 

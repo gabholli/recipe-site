@@ -3,7 +3,7 @@ import { NavLink } from "react-router"
 import { UserAuth } from "../context/AuthContext"
 
 export default function Header() {
-    const { authenticated } = UserAuth()
+    const { session, signOut } = UserAuth()
 
     return (
         <header className="md:h-20 bg-neutral-600 bg-opacity-50 text-2xl 
@@ -33,7 +33,7 @@ export default function Header() {
                 >
                     Favorites
                 </NavLink>
-                {!authenticated && (<NavLink
+                {!session && (<NavLink
                     to="/signup"
                     className="hover:underline"
                 >
@@ -41,8 +41,9 @@ export default function Header() {
                 </NavLink>
                 )
                 }
-                {authenticated && (<button
+                {session && (<button
                     className="hover:underline"
+                    onClick={signOut}
                 >
                     Sign Out
                 </button>

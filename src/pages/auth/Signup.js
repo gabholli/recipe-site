@@ -20,7 +20,7 @@ export default function Signup() {
             const result = await signUpNewUser(email, password)
 
             if (result.success) {
-                toast("User account created!")
+                toast("User account created. You are logged in!")
                 navigate("/")
             } else {
                 setError(result.error.message)

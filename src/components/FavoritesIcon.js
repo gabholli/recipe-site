@@ -6,7 +6,7 @@ import { UserAuth } from '../context/AuthContext'
 
 export default function FavoritesIcon() {
     const [isFavorite, setIsFavorite] = useState(false)
-    const { authenticated } = UserAuth()
+    const { session } = UserAuth()
 
     function updateFavoriteStatus() {
         setIsFavorite(!isFavorite)
@@ -27,7 +27,7 @@ export default function FavoritesIcon() {
 
     return (
         <>
-            {authenticated &&
+            {session &&
                 <button onClick={handleClick}><FaRegStar color={isFavorite ? "yellow" : "White"} /> </button>
             }
         </>

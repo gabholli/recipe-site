@@ -1,8 +1,9 @@
 import React from "react"
 import { NavLink } from "react-router"
+import { UserAuth } from "../context/AuthContext"
 
 export default function Header() {
-
+    const { authenticated } = UserAuth()
 
     return (
         <header className="md:h-20 bg-neutral-600 bg-opacity-50 text-2xl 
@@ -32,12 +33,21 @@ export default function Header() {
                 >
                     Favorites
                 </NavLink>
-                <NavLink
+                {!authenticated && (<NavLink
                     to="/signup"
                     className="hover:underline"
                 >
-                    Sign Up
+                    Sign Up/Log In
                 </NavLink>
+                )
+                }
+                {authenticated && (<button
+                    className="hover:underline"
+                >
+                    Sign Out
+                </button>
+                )
+                }
             </nav>
 
         </header>

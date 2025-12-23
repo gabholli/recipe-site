@@ -10,6 +10,11 @@ export default function FavoritesIcon() {
 
     function updateFavoriteStatus() {
         setIsFavorite(!isFavorite)
+        if (!isFavorite) {
+            console.log("Is favorite!")
+        } else {
+            console.log("Not is favorite!")
+        }
     }
 
     function favoriteMessage() {

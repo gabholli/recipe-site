@@ -58,7 +58,7 @@ export default function Recipes() {
             </Link>
             <div className="flex justify-center text-center items-center mt-12 px-4 gap-x-8 md:gap-x-8">
                 <h1 className="text-3xl">{meal.strMeal}</h1>
-                <FavoritesIcon />
+                <FavoritesIcon meal={meal} />
             </div>
 
         </div>

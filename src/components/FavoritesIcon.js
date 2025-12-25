@@ -3,40 +3,17 @@ import { FaRegStar } from "react-icons/fa"
 import { useState } from 'react'
 import toast from 'react-hot-toast'
 import { UserAuth } from '../context/AuthContext'
-import { supabase } from "../database/supabaseClient"
 
-export default function FavoritesIcon({ meal }) {
+export default function FavoritesIcon() {
     const [isFavorite, setIsFavorite] = useState(false)
     const { session } = UserAuth()
 
-    async function updateFavoriteStatus() {
+    function updateFavoriteStatus() {
         setIsFavorite(!isFavorite)
         if (!isFavorite) {
-            const { error } = await supabase
-                .from('recipes')
-                .upsert({
-                    user_id: session.user.id,
-                    recipe_id: meal.idMeal,
-                    name: meal.strMeal,
-                    favorite: true
-                },
-                    {
-                        onConflict: "user_id,recipe_id"
-
-                    })
-            if (error) {
-                console.error("Error: ", error)
-            }
+            console.log("Is favorite!")
         } else {
-            const { error } = await supabase
-                .from('recipes')
-                .delete()
-                .eq("user_id", session.user.id)
-                .eq("recipe_id", meal.idMeal)
-
-            if (error) {
-                console.log("Error: ", error)
-            }
+            console.log("Not is favorite!")
         }
     }
 

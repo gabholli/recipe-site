@@ -48,15 +48,25 @@ export default function FavoritesList() {
 
     return (
         <>
-            {session ? (
+            {session && recipeMap.length > 0 && (
                 <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-12 mx-12 p-4">
                     {recipeMap}
                 </div>
-            ) :
-                <div className='flex justify-center items-center text-3xl flex-col'>
+            )}
+
+            {session && recipeMap.length === 0 && (
+                <div className='flex justify-center items-center text-3xl text-center'>
+                    <p>Add from within website to store your favorite recipes!</p>
+                </div>
+            )}
+
+            {!session && (
+                < div className='flex justify-center items-center text-3xl text-center'>
                     <p>Log in to store your favorite recipes!</p>
                 </div>
-            }
+            )}
+
+
         </>
 
     )

@@ -47,16 +47,12 @@ export default function Recipes() {
             <Link
                 className="text-center"
                 to={meal.idMeal}
-            // state={{
-            //     search: `?${searchParams.toString()}`,
-            //     type: typeFilter
-            // }}
             >
                 <img className="rounded p-0 md:p-0"
                     src={meal.strMealThumb}
                     alt="" />
             </Link>
-            <div className="flex justify-center text-center items-center mt-12 px-4 gap-x-8 md:gap-x-8">
+            <div className="flex justify-center text-center items-center mt-12 px-4 gap-x-8 md:gap-x-8 h-20">
                 <h1 className="text-3xl">{meal.strMeal}</h1>
                 <FavoritesIcon meal={meal} />
             </div>

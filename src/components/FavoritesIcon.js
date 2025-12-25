@@ -3,18 +3,25 @@ import { FaRegStar } from "react-icons/fa"
 import { useState } from 'react'
 import toast from 'react-hot-toast'
 import { UserAuth } from '../context/AuthContext'
+import { supabase } from "../database/supabaseClient"
 
 export default function FavoritesIcon() {
     const [isFavorite, setIsFavorite] = useState(false)
     const { session } = UserAuth()
 
-    function updateFavoriteStatus() {
+    async function updateFavoriteStatus() {
         setIsFavorite(!isFavorite)
         if (!isFavorite) {
-            console.log("Is favorite!")
-        } else {
-            console.log("Not is favorite!")
+            const { error } = await supabase
+                .from('instruments')
+                .upsert({ id: 1, name: 'piano' })
+                .select()
+
+            if (error) {
+                console.error("Error: ", error)
+            }
         }
+
     }
 
     function favoriteMessage() {

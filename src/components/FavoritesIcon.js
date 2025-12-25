@@ -5,7 +5,7 @@ import toast from 'react-hot-toast'
 import { UserAuth } from '../context/AuthContext'
 import { supabase } from "../database/supabaseClient"
 
-export default function FavoritesIcon() {
+export default function FavoritesIcon({ meal }) {
     const [isFavorite, setIsFavorite] = useState(false)
     const { session } = UserAuth()
 
@@ -13,9 +13,23 @@ export default function FavoritesIcon() {
         setIsFavorite(!isFavorite)
         if (!isFavorite) {
             const { error } = await supabase
-                .from('instruments')
-                .upsert({ id: 1, name: 'piano' })
+                .from('recipes')
+                .upsert({
+                    name: meal.strMeal,
+                    user_id: session.user.id,
+                    recipe_id: meal.idMeal,
+                    favorite: true
+                })
                 .select()
+
+            if (error) {
+                console.error("Error: ", error)
+            }
+        } else {
+            const { error } = await supabase
+                .from('recipes')
+                .delete()
+                .eq('name', meal.strMeal)
 
             if (error) {
                 console.error("Error: ", error)

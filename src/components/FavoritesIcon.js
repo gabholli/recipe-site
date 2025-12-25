@@ -14,14 +14,29 @@ export default function FavoritesIcon({ meal }) {
         if (!isFavorite) {
             const { error } = await supabase
                 .from('recipes')
-                .insert({
+                .upsert({
                     user_id: session.user.id,
                     recipe_id: meal.idMeal,
                     name: meal.strMeal,
                     favorite: true
-                })
+                },
+                    {
+                        onConflict: "user_id,recipe_id"
+
+                    })
+            if (error) {
+                console.error("Error: ", error)
+            }
         } else {
-            console.log("Not is favorite!")
+            const { error } = await supabase
+                .from('recipes')
+                .delete()
+                .eq("user_id", session.user.id)
+                .eq("recipe_id", meal.idMeal)
+
+            if (error) {
+                console.log("Error: ", error)
+            }
         }
     }
 

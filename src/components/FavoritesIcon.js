@@ -18,12 +18,14 @@ export default function FavoritesIcon({ meal }) {
                     name: meal.strMeal,
                     user_id: session.user.id,
                     recipe_id: meal.idMeal,
-                    favorite: true
+                    favorite: true,
+                    image: meal.strMealThumb
                 })
                 .select()
 
             if (error) {
                 console.error("Error: ", error)
+                setIsFavorite(isFavorite)
             }
         } else {
             const { error } = await supabase
@@ -33,6 +35,7 @@ export default function FavoritesIcon({ meal }) {
 
             if (error) {
                 console.error("Error: ", error)
+                setIsFavorite(isFavorite)
             }
         }
 

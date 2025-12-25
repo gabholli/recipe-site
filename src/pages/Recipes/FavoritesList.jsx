@@ -6,8 +6,10 @@ import { Link } from "react-router"
 export default function FavoritesList() {
     const { session } = UserAuth()
     const [favList, setFavList] = useState([])
+    const [loading, setLoading] = useState(false)
 
     useEffect(() => {
+        setLoading(true)
         async function fetchFavoritesList() {
             const { data, error } = await supabase
                 .from('recipes')
@@ -18,6 +20,8 @@ export default function FavoritesList() {
             }
 
             setFavList(data)
+            setLoading(false)
+
         }
 
         fetchFavoritesList()
@@ -44,10 +48,19 @@ export default function FavoritesList() {
         )
     })
 
-    console.log(recipeMap)
+    if (loading) {
+        return (
+            <div className="flex justify-center items-center flex-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path
+                    fill="currentColor" d="M12,4a8,8,0,0,1,7.89,6.7A1.53,1.53,0,0,0,21.38,12h0a1.5,1.5,0,0,0,1.48-1.75,11,11,0,0,0-21.72,0A1.5,1.5,0,0,0,2.62,12h0a1.53,1.53,0,0,0,1.49-1.3A8,8,0,0,1,12,4Z">
+                    <animateTransform attributeName="transform" dur="0.75s" repeatCount="indefinite"
+                        type="rotate" values="0 12 12;360 12 12" /></path></svg>
+            </div>
+        )
+    }
 
     return (
-        <>
+        <div className="py-12 flex flex-1 flex-col items-center">
             {session && recipeMap.length > 0 && (
                 <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-12 mx-12 p-4">
                     {recipeMap}
@@ -67,7 +80,7 @@ export default function FavoritesList() {
             )}
 
 
-        </>
+        </div>
 
     )
 }

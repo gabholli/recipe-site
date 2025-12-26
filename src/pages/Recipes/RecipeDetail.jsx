@@ -29,7 +29,7 @@ export default function RecipeDetail() {
         return (
             <div key={item.idMeal} className="text-center flex flex-1 flex-col
             items-center justify-center gap-10 px-6 py-8">
-                <div className="flex gap-x-12">
+                <div className="flex flex-col justify-center items-center gap-y-7">
                     <h1 className="text-5xl">{item.strMeal}</h1>
                     <FavoritesIcon meal={item} />
                 </div>

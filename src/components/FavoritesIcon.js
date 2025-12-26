@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FaRegStar } from "react-icons/fa"
 import { useState } from 'react'
 import toast from 'react-hot-toast'
@@ -8,6 +8,34 @@ import { supabase } from "../database/supabaseClient"
 export default function FavoritesIcon({ meal }) {
     const [isFavorite, setIsFavorite] = useState(false)
     const { session } = UserAuth()
+
+    useEffect(() => {
+        async function detectIfFavorite() {
+            if (!session || !meal) return
+            const { data, error } = await supabase
+                .from('recipes')
+                .select()
+                .eq("name", meal.strMeal)
+                .eq("favorite", "true")
+
+            if (error) {
+                console.error("Error: ", error)
+                return
+            }
+
+            if (data && data.length > 0) {
+                setIsFavorite(true)
+            } else {
+                setIsFavorite(false)
+            }
+
+        }
+
+        detectIfFavorite()
+    }, [session, meal])
+
+
+
 
     async function updateFavoriteStatus() {
         setIsFavorite(!isFavorite)

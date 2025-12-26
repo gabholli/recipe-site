@@ -83,7 +83,7 @@ export default function FavoritesIcon({ meal }) {
             {session &&
                 <button onClick={updateFavoriteStatus}
                     disabled={isUpdating}
-                ><FaRegStar color={isFavorite ? "yellow" : "White"} /> </button>
+                ><FaRegStar color={isFavorite ? "yellow" : "white"} /> </button>
             }
         </>
     )

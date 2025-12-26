@@ -41,7 +41,7 @@ export default function RandomMeal() {
                     items-center justify-center gap-10 px-6 py-8">
                 <div className="flex gap-x-12">
                     <h1 className="text-5xl">{random.strMeal}</h1>
-                    <FavoritesIcon />
+                    <FavoritesIcon meal={random} />
                 </div>
                 <img className="rounded sm:w-1/3" src={random.strMealThumb} alt=" Random food" />
                 {

@@ -60,11 +60,14 @@ export default function FavoritesList() {
     }
 
     return (
-        <div className="py-12 flex flex-1 flex-col items-center">
+        <div className="py-12 flex flex-1 flex-col justify-center items-center">
             {session && recipeMap.length > 0 && (
-                <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-12 mx-12 p-4">
-                    {recipeMap}
-                </div>
+                <>
+                    <h1 className='text-center text-4xl mb-10'>Favorites</h1>
+                    <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-12 mx-12 p-4">
+                        {recipeMap}
+                    </div>
+                </>
             )}
 
             {session && recipeMap.length === 0 && (

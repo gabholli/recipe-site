@@ -31,7 +31,7 @@ export default function RecipeDetail() {
             items-center justify-center gap-10 px-6 py-8">
                 <div className="flex gap-x-12">
                     <h1 className="text-5xl">{item.strMeal}</h1>
-                    <FavoritesIcon />
+                    <FavoritesIcon meal={item} />
                 </div>
                 <img className="rounded sm:w-1/3" src={item.strMealThumb} alt="Food item" />
                 {item.strYoutube ? <Link className="underline text-4xl" to={item.strYoutube}

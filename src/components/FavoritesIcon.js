@@ -7,6 +7,7 @@ import { supabase } from "../database/supabaseClient"
 
 export default function FavoritesIcon({ meal }) {
     const [isFavorite, setIsFavorite] = useState(false)
+    const [isUpdating, setIsUpdating] = useState(false)
     const { session } = UserAuth()
 
     useEffect(() => {
@@ -18,17 +19,14 @@ export default function FavoritesIcon({ meal }) {
                 .eq("user_id", session.user.id)
                 .eq("recipe_id", meal.idMeal)
                 .eq("favorite", true)
+                .maybeSingle()
 
             if (error) {
                 console.error("Error: ", error)
                 return
             }
 
-            if (data && data.length > 0) {
-                setIsFavorite(true)
-            } else {
-                setIsFavorite(false)
-            }
+            setIsFavorite(!!data)
 
         }
 
@@ -39,54 +37,53 @@ export default function FavoritesIcon({ meal }) {
 
 
     async function updateFavoriteStatus() {
+        if (!session || !meal || isUpdating) return
+
+        setIsUpdating(true)
         const newFavoriteState = !isFavorite
         setIsFavorite(newFavoriteState)
-        if (newFavoriteState) {
-            const { error } = await supabase
-                .from('recipes')
-                .upsert({
-                    name: meal.strMeal,
-                    user_id: session.user.id,
-                    recipe_id: meal.idMeal,
-                    favorite: true,
-                    image: meal.strMealThumb
-                })
-                .select()
 
-            if (error) {
-                console.error("Error: ", error)
-                setIsFavorite(!newFavoriteState)
-                toast.error("Failed to add favorite")
-                return
+        try {
+            if (newFavoriteState) {
+                const { error } = await supabase
+                    .from('recipes')
+                    .upsert({
+                        name: meal.strMeal,
+                        user_id: session.user.id,
+                        recipe_id: meal.idMeal,
+                        favorite: true,
+                        image: meal.strMealThumb
+                    })
+                    .select()
+
+                if (error) throw error
+                toast("Recipe added to favorites!")
+
+            } else {
+                const { error } = await supabase
+                    .from('recipes')
+                    .delete()
+                    .eq("user_id", session.user.id)
+                    .eq('recipe_id', meal.idMeal)
+
+                if (error) throw error
+                toast("Recipe removed from favorites")
             }
-
-            toast("Recipe added to favorites!")
-        } else {
-            const { error } = await supabase
-                .from('recipes')
-                .delete()
-                .eq("user_id", session.user.id)
-                .eq('recipe_id', meal.idMeal)
-
-            if (error) {
-                console.error("Error: ", error)
-                setIsFavorite(!newFavoriteState)
-                toast.error("Failed to remove favorite")
-                return
-            }
-            toast("Recipe removed from favorites")
+        } catch (error) {
+            console.error("Error: ", error)
+            setIsFavorite(!newFavoriteState)
+            toast.error(`Failed to ${newFavoriteState ? 'add' : 'remove'} favorite`)
+        } finally {
+            setIsUpdating(false) // Always runs
         }
-
-    }
-
-    function handleClick() {
-        updateFavoriteStatus()
     }
 
     return (
         <>
             {session &&
-                <button onClick={handleClick}><FaRegStar color={isFavorite ? "yellow" : "White"} /> </button>
+                <button onClick={updateFavoriteStatus}
+                    disabled={isUpdating}
+                ><FaRegStar color={isFavorite ? "yellow" : "White"} /> </button>
             }
         </>
     )

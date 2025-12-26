@@ -1,8 +1,8 @@
 # Project Title
-Food Recipe Site
+Recipe Repository
 
 ## Description
-This repository contains files for a recipe site created using React and React Router 7 along with Tailwind CSS.
+This repository contains files for a recipe site created using React, React-Router 7 and Tailwind CSS. I also used Supabase and PostgreSQL to implement a persistent favorites list with authentication.
 
 ## Getting Started
 ### Dependencies

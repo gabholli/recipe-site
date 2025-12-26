@@ -3,8 +3,16 @@ import { useState, useEffect } from "react"
 import { Link } from "react-router"
 import FavoritesIcon from "../../components/FavoritesIcon"
 
+function getItemFromLocalStorage() {
+    try {
+        return JSON.parse(localStorage.getItem("foodItem")) || ""
+    } catch {
+        return ""
+    }
+}
+
 export default function Recipes() {
-    const foodItemFromLocalStorage = JSON.parse(localStorage.getItem("foodItem"))
+    const foodItemFromLocalStorage = getItemFromLocalStorage()
     const [foodData, setFoodData] = useState([])
     const [search, setSearch] = useState({
         foodItem: foodItemFromLocalStorage
@@ -37,8 +45,10 @@ export default function Recipes() {
                     setFoodData(data.meals)
                     setLoading(false)
                 })
-                .catch(error =>
-                    console.log("Fetch error: ", error))
+                .catch(error => {
+                    console.log("Fetch error: ", error)
+                    setLoading(false)
+                })
         }
     }, [search])
 
@@ -50,7 +60,7 @@ export default function Recipes() {
             >
                 <img className="rounded p-0 md:p-0"
                     src={meal.strMealThumb}
-                    alt="" />
+                    alt="Recipe item" />
             </Link>
             <div className="flex justify-center text-center items-center mt-12 px-4 gap-x-8 md:gap-x-8 h-20">
                 <h1 className="text-3xl">{meal.strMeal}</h1>

@@ -15,8 +15,9 @@ export default function FavoritesIcon({ meal }) {
             const { data, error } = await supabase
                 .from('recipes')
                 .select()
-                .eq("name", meal.strMeal)
-                .eq("favorite", "true")
+                .eq("user_id", session.user.id)
+                .eq("recipe_id", meal.idMeal)
+                .eq("favorite", true)
 
             if (error) {
                 console.error("Error: ", error)
@@ -38,8 +39,9 @@ export default function FavoritesIcon({ meal }) {
 
 
     async function updateFavoriteStatus() {
-        setIsFavorite(!isFavorite)
-        if (!isFavorite) {
+        const newFavoriteState = !isFavorite
+        setIsFavorite(newFavoriteState)
+        if (newFavoriteState) {
             const { error } = await supabase
                 .from('recipes')
                 .upsert({
@@ -53,33 +55,32 @@ export default function FavoritesIcon({ meal }) {
 
             if (error) {
                 console.error("Error: ", error)
-                setIsFavorite(isFavorite)
+                setIsFavorite(!newFavoriteState)
+                toast.error("Failed to add favorite")
+                return
             }
+
+            toast("Recipe added to favorites!")
         } else {
             const { error } = await supabase
                 .from('recipes')
                 .delete()
-                .eq('name', meal.strMeal)
+                .eq("user_id", session.user.id)
+                .eq('recipe_id', meal.idMeal)
 
             if (error) {
                 console.error("Error: ", error)
-                setIsFavorite(isFavorite)
+                setIsFavorite(!newFavoriteState)
+                toast.error("Failed to remove favorite")
+                return
             }
-        }
-
-    }
-
-    function favoriteMessage() {
-        if (!isFavorite) {
-            toast("Recipe added to favorites!")
-        } else {
             toast("Recipe removed from favorites")
         }
+
     }
 
     function handleClick() {
         updateFavoriteStatus()
-        favoriteMessage()
     }
 
     return (

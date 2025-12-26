@@ -9,24 +9,29 @@ export default function FavoritesList() {
     const [loading, setLoading] = useState(false)
 
     useEffect(() => {
+        if (!session) return
         setLoading(true)
         async function fetchFavoritesList() {
             const { data, error } = await supabase
                 .from('recipes')
                 .select()
+                .eq("user_id", session.user.id)
+                .eq("favorite", true)
 
             if (error) {
                 console.error("Error: ", error)
+                setLoading(false)
+                return
             }
 
-            setFavList(data)
+            setFavList(data || [])
             setLoading(false)
 
         }
 
         fetchFavoritesList()
 
-    }, [])
+    }, [session])
 
     const recipeMap = favList?.map(item => {
         return (
@@ -38,7 +43,7 @@ export default function FavoritesList() {
                 >
                     <img className="rounded p-0 md:p-0"
                         src={item.image}
-                        alt="" />
+                        alt="Recipe item" />
                 </Link>
                 <div className="flex justify-center text-center items-center mt-12 px-4 gap-x-8 md:gap-x-8">
                     <h1 className="text-3xl">{item.name}</h1>
@@ -77,7 +82,7 @@ export default function FavoritesList() {
             )}
 
             {!session && (
-                < div className='flex justify-center items-center text-3xl text-center'>
+                <div className='flex justify-center items-center text-3xl text-center'>
                     <p>Log in to store your favorite recipes!</p>
                 </div>
             )}

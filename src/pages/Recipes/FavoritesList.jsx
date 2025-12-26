@@ -46,7 +46,7 @@ export default function FavoritesList() {
                         alt="Recipe item" />
                 </Link>
                 <div className="flex justify-center text-center items-center mt-12 px-4 gap-x-8 md:gap-x-8">
-                    <h1 className="text-3xl">{item.name}</h1>
+                    <h1 className="text-2xl lg:text-3xl">{item.name}</h1>
                 </div>
 
             </div>

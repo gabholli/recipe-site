@@ -1,6 +1,7 @@
 import React from "react"
 import { useState, useEffect } from "react"
 import { Link } from "react-router"
+import FavoritesIcon from "../../components/FavoritesIcon"
 
 export default function RandomMeal() {
     const [random, setRandom] = useState(null)
@@ -38,7 +39,10 @@ export default function RandomMeal() {
         <> {random &&
             <div className="text-center flex flex-1 flex-col
                     items-center justify-center gap-10 px-6 py-8">
-                <h1 className="text-5xl">{random.strMeal}</h1>
+                <div className="flex gap-x-12">
+                    <h1 className="text-5xl">{random.strMeal}</h1>
+                    <FavoritesIcon meal={random} />
+                </div>
                 <img className="rounded sm:w-1/3" src={random.strMealThumb} alt=" Random food" />
                 {
                     random.strYoutube ? <Link className="underline text-4xl"

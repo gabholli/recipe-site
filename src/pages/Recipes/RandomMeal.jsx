@@ -53,7 +53,7 @@ export default function RandomMeal() {
                     </Link>
                         : ""
                 }
-                <h2 className="text=2xl lg:text-3xl">Ingredients:</h2>
+                <h2 className="text-2xl lg:text-3xl">Ingredients:</h2>
                 <div className="text-xl leading-10">
                     <p>{random.strMeasure1} {random.strIngredient1}</p>
                     <p>{random.strMeasure2} {random.strIngredient2}</p>

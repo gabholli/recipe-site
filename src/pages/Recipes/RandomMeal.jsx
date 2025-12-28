@@ -40,12 +40,12 @@ export default function RandomMeal() {
             <div className="text-center flex flex-1 flex-col
                     items-center justify-center gap-10 px-6 py-8">
                 <div className="flex flex-col justify-center items-center gap-y-7">
-                    <h1 className="text-5xl">{random.strMeal}</h1>
+                    <h1 className="text-4xl lg:text-5xl">{random.strMeal}</h1>
                     <FavoritesIcon meal={random} />
                 </div>
                 <img className="rounded sm:w-1/3" src={random.strMealThumb} alt=" Random food" />
                 {
-                    random.strYoutube ? <Link className="underline text-4xl"
+                    random.strYoutube ? <Link className="underline text-3xl lg:text-4xl"
                         to={random.strYoutube}
                         target="_blank"
                         rel="noopener noreferrer">
@@ -53,7 +53,7 @@ export default function RandomMeal() {
                     </Link>
                         : ""
                 }
-                <h2 className="text-3xl">Ingredients:</h2>
+                <h2 className="text=2xl lg:text-3xl">Ingredients:</h2>
                 <div className="text-xl leading-10">
                     <p>{random.strMeasure1} {random.strIngredient1}</p>
                     <p>{random.strMeasure2} {random.strIngredient2}</p>
@@ -74,7 +74,7 @@ export default function RandomMeal() {
                     <p>{random.strMeasure19} {random.strIngredient19}</p>
                     <p>{random.strMeasure20} {random.strIngredient20}</p>
                 </div>
-                <h1 className="text-3xl">Instructions:</h1>
+                <h1 className="text-2xl lg:text-3xl">Instructions:</h1>
                 <p className="text-xl text-left leading-10 indent-14">{random.strInstructions}</p>
             </div>
         }

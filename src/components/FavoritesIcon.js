@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { FaRegStar } from "react-icons/fa"
 import { useState } from 'react'
 import toast from 'react-hot-toast'

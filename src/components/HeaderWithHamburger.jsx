@@ -81,7 +81,6 @@ export default function HeaderWithHamburger() {
                     transform transition-transform
                     ${isOpen ? "flex" : "hidden"}`}>
                 <nav
-                    onClick={() => setIsOpen(false)}
                     className="w-full text-center
                         p-4 hover:bg-neutral-800 transition-all
                         cursor-pointer flex flex-col gap-y-6">

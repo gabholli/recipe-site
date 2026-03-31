@@ -25,7 +25,9 @@ export default function HeaderWithHamburger() {
     }, [])
 
     return (
-        <header className="relative flex justify-end lg:justify-center items-center bg-opacity-50 bg-neutral-600
+        <header
+            ref={menuRef}
+            className="relative flex justify-end lg:justify-center items-center bg-opacity-50 bg-neutral-600
             text-white py-6 px-8 md:px-16 xl:px-32 text-center">
             <nav className="hidden lg:flex items-center gap-12
                     md:text-3xl">

@@ -32,37 +32,37 @@ export default function HeaderWithHamburger() {
             <nav className="hidden lg:flex items-center gap-12
                     md:text-3xl">
                 <NavLink
-                    className="focus:underline"
+                    className="aria-[current=page]:underline"
                     to="/">Home
                 </NavLink>
                 <NavLink
                     to="/recipes"
-                    className="focus:underline"
+                    className="aria-[current=page]:underline"
                 >
                     Recipes
                 </NavLink>
                 <NavLink
                     to="/random"
-                    className="focus:underline"
+                    className="aria-[current=page]:underline"
                 >
                     Random Meal
                 </NavLink>
                 <NavLink
                     to="/favorites"
-                    className="focus:underline"
+                    className="aria-[current=page]:underline"
                 >
                     Favorites
                 </NavLink>
                 {!session && (<NavLink
                     to="/signup"
-                    className="focus:underline"
+                    className="aria-[current=page]:underline"
                 >
                     Sign Up/Log In
                 </NavLink>
                 )
                 }
                 {session && (<button
-                    className="focus:underline"
+                    className="aria-[current=page]:underline"
                     onClick={signOut}
                 >
                     Sign Out
@@ -87,37 +87,37 @@ export default function HeaderWithHamburger() {
                         p-4 transition-all
                         cursor-pointer flex flex-col gap-y-6">
                     <NavLink
-                        className="focus:underline"
+                        className="aria-[current=page]:underline"
                         to="/">Home
                     </NavLink>
                     <NavLink
                         to="/recipes"
-                        className="focus:underline"
+                        className="aria-[current=page]:underline"
                     >
                         Recipes
                     </NavLink>
                     <NavLink
                         to="/random"
-                        className="focus:underline"
+                        className="aria-[current=page]:underline"
                     >
                         Random Meal
                     </NavLink>
                     <NavLink
                         to="/favorites"
-                        className="focus:underline"
+                        className="aria-[current=page]:underline"
                     >
                         Favorites
                     </NavLink>
                     {!session && (<NavLink
                         to="/signup"
-                        className="focus:underline"
+                        className="aria-[current=page]:underline"
                     >
                         Sign Up/Log In
                     </NavLink>
                     )
                     }
                     {session && (<button
-                        className="focus:underline"
+                        className="aria-[current=page]:underline"
                         onClick={signOut}
                     >
                         Sign Out

@@ -8,6 +8,22 @@ export default function HeaderWithHamburger() {
     const { session, signOut } = UserAuth()
     const [isOpen, setIsOpen] = useState(false)
 
+    let menuRef = useRef(null)
+
+    useEffect(() => {
+        function handler(e) {
+            if (menuRef.current && !menuRef.current.contains(e.target)) {
+                setIsOpen(false)
+            }
+        }
+
+        document.addEventListener("mousedown", handler)
+
+        return () => {
+            document.removeEventListener("mousedown", handler)
+        }
+    }, [])
+
     return (
         <header className="relative flex justify-end lg:justify-center items-center bg-opacity-50 bg-neutral-600
             text-white py-6 px-8 md:px-16 xl:px-32 text-center">

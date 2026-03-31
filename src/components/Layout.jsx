@@ -8,7 +8,6 @@ export default function Layout() {
         <div className="bg-black font-hedvig text-white
             grid grid-rows-[auto_1fr_auto] grid-cols-1 w-full min-h-screen">
             <HeaderWithHamburger />
-            {/* <Header /> */}
             <Outlet />
             <BackToTopButton />
             <Footer />

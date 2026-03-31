@@ -1,7 +1,7 @@
 import { NavLink } from "react-router";
 import { UserAuth } from "../context/AuthContext";
 import { Menu } from '@boxicons/react';
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function HeaderWithHamburger() {
 

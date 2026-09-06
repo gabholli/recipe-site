@@ -4,7 +4,7 @@ Recipe Repository
 ## Description
 This repository contains files for a recipe site created using React, React-Router 7 and Tailwind CSS. I also used Supabase and PostgreSQL to implement a persistent favorites list with authentication.
 
-![Screenshot of Recipe Repository's title screen](/public/recipe-site.png)
+![Screenshot of Recipe Repository's title screen](../public/recipe-site.png)
 
 ## Getting Started
 ### Dependencies
